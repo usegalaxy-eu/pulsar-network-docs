@@ -53,8 +53,8 @@ The next step is the Pulsar configuration providing a valid RabbitMQ endpoint to
 #. Make a Pull Request to the original repository. Once merged the useGalaxy.eu team will provide you the RabbitMQ queue URL by mail.
 
    .. figure:: _static/img/rabbitmq_PR.png
-   :scale: 20%
-   :align: center
+      :scale: 20%
+      :align: center
 
    The queue URL looks like:
 
