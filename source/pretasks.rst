@@ -40,7 +40,7 @@ Pre-tasks configuration
      $ ls
      ext_network.tf pre_tasks.tf providers.tf vars.tf 
 
-#. Edit the ``<workspace-name>/pre_tasks.tf`` recipe. It hase three sections:
+#. Edit the ``<workspace-name>/pre_tasks.tf`` recipe. It has three sections:
 
    - Upload the virtual machine image via OpenStack API. This block should be commented if the image is already available on your tenant or if you upload it via the dashboard interface.
 
@@ -48,7 +48,7 @@ Pre-tasks configuration
 
    - Create a router to ensure the private network will be able to reach the Internet. This block should be commented if this feature is provided by the network
 
-#. Edit the ``<workspace-name>/vars.tf`` file to confiugre the Pulsar endpoint.
+#. Edit the ``<workspace-name>/vars.tf`` file to configure the Pulsar endpoint.
 
    .. note::
 
