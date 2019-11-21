@@ -150,7 +150,7 @@ Configuration options
 	::
 	  
 	  variable "name_suffix" {
-	    default = ".usegalaxy.eu"
+	    default = ".pulsar"
 	  }
 
 -------------------

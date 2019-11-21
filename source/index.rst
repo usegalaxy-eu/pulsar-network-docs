@@ -24,6 +24,7 @@ This documentation shows how to install and configure a Pulsar network endpoint 
    rabbitmq
    pulsar
    galaxy
+   vars_tf
 
 
 Indices and tables
