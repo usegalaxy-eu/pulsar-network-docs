@@ -16,7 +16,7 @@ This documentation shows how to install and configure a Pulsar network endpoint 
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents:
+   :caption: Pulsar Endpoint Configuration
 
    requirements
    pretasks
