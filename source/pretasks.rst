@@ -29,7 +29,7 @@ Pre-tasks configuration
 
    ::
 
-     git clone https://github.com/<repository-name>/pulsar-infrastructure.git
+     git clone https://github.com/<user-name>/pulsar-infrastructure.git
 
 #. Navigate in the pulsar-infrastructure directory:
 
