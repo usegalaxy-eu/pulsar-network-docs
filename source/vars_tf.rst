@@ -5,9 +5,9 @@ Each pulsar endpoint can be configured editing the ``vars.tf``, located in the t
 
 Navigate in the Pulsar infrastructure directory:
 
-   ::
+::
 
-     cd pulsar-infrastructure
+  cd pulsar-infrastructure
 
 and edit the file ``<workspace-name>/vars.tf`` with your favourite text ediitor.
 
