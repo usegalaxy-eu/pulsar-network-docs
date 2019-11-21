@@ -3,19 +3,6 @@ Pre-tasks
 
 The pre_tasks recipes will create Pulsar needed resources, i.e. the virtual image, the private network and the router, which will be used during the Pulsar Network nodes configuration.
 
-Prerequisites
-*************
-
-Make and Unzip are needed to configure a pulsar node, so you need to install them:
-
-::
-
-  # Ubuntu 16.04
-  # apt-get install make unzip
-
-  # CentOS 7
-  # yum install make unzip
-
 Pre-tasks configuration
 ***********************
 

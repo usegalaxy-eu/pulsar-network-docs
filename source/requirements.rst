@@ -17,6 +17,21 @@ The Terraform script needs to access an OpenStack cloud via API to:
 - create three secgroups;
 - upload an ssh public key to access the Central Manager VM.
 
+Software needed
+---------------
+
+Make and Unzip are needed to follow this instruction. You can install them on a Linux machine as described here:
+
+On Ubuntu 18.04
+::
+
+  # apt-get install make unzip
+
+On CentOS 7
+::
+
+  # yum install make unzip
+
 OpenStack configuration
 -----------------------
 
