@@ -35,7 +35,7 @@ The ``apply`` command output is the IP address of the Pulsar Central Manager
   ip_v4_public = 90.147.170.170
   node_name = vgcn-it02-central-manager.pulsar
 
-Finally, all the resources have been created on OpenStack:
+Finally, all the resources have been created on OpenStack. Here, for example, a Pulsar endpoint with the Central Manager, the NFS server and two worker nodes is shown.
 
 .. figure:: _static/img/pulsar_endpoint_openstack.png
    :scale: 25%
