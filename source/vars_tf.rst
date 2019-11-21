@@ -88,6 +88,7 @@ Configuration options
 :Description:
 	Set the VGCN image to use. Terraform expects to find on OpenStack with the name specified in this field.
 	More on VGCN image `here <https://github.com/usegalaxy-eu/vgcn>`_.
+        The image ``name`` must match the name of the image on the OpenStack tenant.
 	This field can be left unchanged.
 
 :Example:
