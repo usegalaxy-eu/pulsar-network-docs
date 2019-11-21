@@ -10,7 +10,7 @@ Edit the file ``infrastructure-playbook/files/galaxy/dynamic_rules/usegalaxy/des
 
 ::
 
-  <destination-name>:
+  remote_cluster_mq_<custom-suffix>:
     limits:
       cores: <number-of-available-cpus-per-node>
       mem: <ram-available-per-node>
@@ -32,7 +32,8 @@ Edit the file ``infrastructure-playbook/files/galaxy/dynamic_rules/usegalaxy/des
       singularity_enabled: true
       singularity_default_container_id: '/cvmfs/singularity.galaxyproject.org/u/b/ubuntu:18.04'
 
-- Set the ``<destination-name>``, for example, using the name `remote_cluster_mq_<custom-suffix>`` and replacing the custom suffix.
+- Replace the ``<custom_suffix>`` using a code which identifies your country and a progressive number indicating the pulsar installation, e.g. ``it02`` for the second installation of Pulsar in Italy.
+.
 
 - The ``<number-of-available-cpus-per-node>`` is the number of the available worker nodes cores.
 
