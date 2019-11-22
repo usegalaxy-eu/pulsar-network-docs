@@ -1,7 +1,8 @@
 Pulsar configuration
 ====================
 
-The RabbitMQ URL is mandatory for Pulsar endpoint configuration. Once obtained it is possible to configure Pulsar and turn it on.
+In this step will be described how to configure the Pulsar endpoint and turn it on.
+The RabbitMQ URL, described in the step before, is mandatory to keep going.
 
 Prerequisites: Ansible installation
 -----------------------------------
@@ -10,6 +11,7 @@ To complete the pulsar configuration and turn it on, `Ansible <https://www.ansib
 
 Prerequisites: hostname configuration
 -------------------------------------
+As we need to refer to a proper fqdn hostname for your Pulsar server, if it doesn't has it you can easily create one into your local machine in this way:
 
 Add the following line to your `/etc/hosts` file:
 
@@ -19,7 +21,7 @@ Add the following line to your `/etc/hosts` file:
 
 Where the ``Central-Manager-Public-IP-address`` is the public IP address of the Central Manager VM and the ``pulsar-endpoint-name`` is the custom name of your endpoint.
 
-For instance, on ``it02`` pulsar endpoint name is: ``it02.pulsar.galaxyproject.eu``
+For example, on ``it02`` pulsar endpoint the fqdn hostname is: ``it02.pulsar.galaxyproject.eu``
 
 Pulsar configuration
 --------------------
@@ -36,7 +38,7 @@ Pulsar configuration
 
      cd pulsar-infrastructure-playbook
 
-#. Change the inventory file, adding an entry for your Pulsar endpoint:
+#. Update the ``inventory`` file, adding an entry for your Pulsar endpoint:
 
    ::
 
@@ -84,7 +86,9 @@ Pulsar configuration
 
      cp -r pulsar-infrastructure-playbook/de01.pulsar.galaxyproject.eu pulsar-infrastructure-playbook/<pulsar-endpoint-name>
 
-#. It is now possibile to configure Pulsar using the Makefile. First of all, check if everything is fine with:
+#. It is now possibile to configure Pulsar using the Makefile.
+
+   First of all, check if everything is fine with:
 
    ::
 

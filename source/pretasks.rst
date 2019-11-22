@@ -1,16 +1,16 @@
-Pre-tasks
-=========
+Preparation
+===========
 
-The pre_tasks recipes will create several Pulsar needed resources which will be used during the nodes configuration:
+This step will create several Pulsar needed resources on the cloud infrastructure, which will be used during the nodes configuration:
 
   - the virtual image
   - the private network
   - the router
 
-These steps can be skipped if your Cloud infrastructure provided them in other ways. More details below.
+This step can be skipped if the resources above are available or provided by your cloud infrastructure in other ways. More details below.
 
-Pre-tasks configuration
-***********************
+Pre-tasks
+---------
 
 .. warning::
 
@@ -55,6 +55,7 @@ Pre-tasks configuration
 
    - Upload the virtual machine image via OpenStack API. This block should be commented if the image is already available on your tenant or if you upload it via the dashboard interface.
 
+
    - Create private network. This block should be commented if network is already available.
 
    - Create a router to ensure the private network will be able to reach the Internet. This block should be commented if this feature is provided by the network
@@ -77,3 +78,5 @@ Pre-tasks configuration
 
      WS=test01 make apply
 
+
+The resources described in to the ``pre_tasks.tf`` are now created on your Openstack tenant.

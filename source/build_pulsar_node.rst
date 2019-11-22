@@ -1,9 +1,9 @@
 Building the Pulsar endpoint
 ============================
 
-After running the pre-tasks recipes and having properly configured the Pulsar endpoint in the ``vars.tf`` file (see section :doc:`vars_tf`) the system is ready to create the Pulsar endpoint.
+After running the pre-tasks recipes and having properly edited the ``vars.tf`` file (see section :doc:`vars_tf`), we are ready to create the Pulsar endpoint.
 
-Navigate in the Pulsar infrastructure directory:
+Navigate into the Pulsar infrastructure directory:
 
 ::
 
@@ -19,7 +19,7 @@ and run:
 
   WS=<workspace-name> make apply
 
-The ``apply`` command output is the IP address of the Pulsar Central Manager
+The ``apply`` command output the IP addresses of the Pulsar Central Manager
 
 ::
 
@@ -35,7 +35,9 @@ The ``apply`` command output is the IP address of the Pulsar Central Manager
   ip_v4_public = 90.147.170.170
   node_name = vgcn-it02-central-manager.pulsar
 
-Finally, all the resources have been created on OpenStack. Here, for example, a Pulsar endpoint with the Central Manager, the NFS server and two worker nodes is shown.
+Finally, all the resources have been created on OpenStack.
+
+Here, for example, the OpenStack dashboard showing a Pulsar endpoint with the Central Manager, the NFS server and two worker nodes.
 
 .. figure:: _static/img/pulsar_endpoint_openstack.png
    :scale: 25%

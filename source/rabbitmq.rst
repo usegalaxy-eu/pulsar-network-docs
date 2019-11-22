@@ -1,7 +1,7 @@
 RabbitMQ configuration
 ======================
 
-The next step is the Pulsar configuration providing a valid RabbitMQ endpoint to usegalaxy.eu, allowing Pulsar to grab jobs from it.
+In this step will be described how to make a PR to the UseGalaxy.eu github repository to create a new RabbitMq account for the Pulsar endpoint.
 
 #. Fork the usegalaxy.eu GitHub `infrastructure-playbook <https://github.com/usegalaxy-eu/infrastructure-playbook>`_.
 
@@ -56,7 +56,7 @@ The next step is the Pulsar configuration providing a valid RabbitMQ endpoint to
       :scale: 40%
       :align: center
 
-   The queue URL looks like:
+   The queue URL will looks like this:
 
    ::
 
