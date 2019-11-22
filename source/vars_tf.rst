@@ -1,7 +1,7 @@
-Variables configuration
-=======================
+Terraform variables details
+===========================
 
-Each pulsar endpoint can be configured editing the ``vars.tf``, located in the terraform worksapce directory.
+Each pulsar endpoint can be configured editing the ``vars.tf``, located in the terraform workspace directory.
 
 Navigate in the Pulsar infrastructure directory:
 
