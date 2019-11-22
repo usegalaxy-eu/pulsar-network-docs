@@ -33,7 +33,6 @@ Edit the file ``infrastructure-playbook/files/galaxy/dynamic_rules/usegalaxy/des
       singularity_default_container_id: '/cvmfs/singularity.galaxyproject.org/u/b/ubuntu:18.04'
 
 - Replace the ``<custom_suffix>`` using a code which identifies your country and a progressive number indicating the pulsar installation, e.g. ``it02`` for the second installation of Pulsar in Italy.
-.
 
 - The ``<number-of-available-cpus-per-node>`` is the number of the available worker nodes cores.
 
