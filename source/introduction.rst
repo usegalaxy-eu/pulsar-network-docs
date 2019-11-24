@@ -37,7 +37,7 @@ but the more the better.
 Architecture
 ------------
 
-Usegalaxy.eu and the remote Pulsar endpoints will communicate trough a RabbitMQ queue; in this way, the Pulsar endpoints don't need to expose any open ports to the external.
+Usegalaxy.eu and the remote Pulsar endpoints will communicate through a RabbitMQ queue; in this way, the Pulsar endpoints don't need to expose any open ports to the external.
 
 .. figure:: _static/img/architecture2.png
    :scale: 60%
