@@ -1,7 +1,8 @@
 RabbitMQ configuration
 ======================
 
-In this step will be described how to make a PR to the UseGalaxy.eu github repository to create a new RabbitMq account for the Pulsar endpoint.
+In this step will be described how to make a PR to the `UseGalaxy.eu <https://github.com/usegalaxy-eu>`_ GitHub
+repository to create a new RabbitMQ account for your Pulsar endpoint.
 
 #. Fork the usegalaxy.eu GitHub `infrastructure-playbook <https://github.com/usegalaxy-eu/infrastructure-playbook>`_.
 
@@ -34,7 +35,7 @@ In this step will be described how to make a PR to the UseGalaxy.eu github repos
            vhost: /pulsar/galaxy_it02
 
 
-   - Add the your virtual host, previously configured, to the ``rabbitmq_vhosts`` section:
+   - Add your virtual host, previously configured, to the ``rabbitmq_vhosts`` section:
 
      ::
 
@@ -50,7 +51,9 @@ In this step will be described how to make a PR to the UseGalaxy.eu github repos
        ...
          - /pulsar/galaxy_it02
 
-#. Make a Pull Request to the original repository. Once merged the useGalaxy.eu team will provide you the RabbitMQ queue URL by mail.
+#. Make a Pull Request to the original repository and contact the usegalaxy.eu admins.
+Once merged the useGalaxy.eu team will provide you the RabbitMQ queue URL by mail,
+which needs to be added to your Pulsar configuration as described in the next step.
 
    .. figure:: _static/img/rabbitmq_PR.png
       :scale: 40%

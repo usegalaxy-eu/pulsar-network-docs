@@ -19,7 +19,9 @@ Configuration options
 ``nfs_disk_size``
 -----------------
 
-:Description: Size of the NFS storage drive. We suggest at least 300 GB of storage.
+:Description:
+	Size of the NFS storage drive. We suggest at least 300 GB of storage. The NFS will store all data that is
+	processed at a given time. This includes input, output, intermediate data and Singularity images (if Singularity is used).
 
 :Example:
 
@@ -36,8 +38,9 @@ Configuration options
 :Description:
 	Instance flavours names of the available flavours on your OpenStack tenant.
 	``central-manager`` and ``nfs-server`` have minimal requirements, e.g. 4 virtual CPUs and 8 GB of RAM for each of them.
-        The ``exec-node`` configures the HTCondor worker nodes. Its configuration depends on the availability on your Cloud provider. At least 16 vCPUs and 32 GB RAM are recommended. 
-	The ``gpu-node`` identifies the size of the GPU nodes.
+        The ``exec-node`` configures the HTCondor worker nodes. Its configuration depends on the availability on your Cloud provider.
+        At least 16 vCPUs and 32 GB RAM are recommended, but in the end it depends on the tools/workflows you want to process on your puslar
+        endpoint. The ``gpu-node`` is optional and identifies the size of the GPU nodes.
 
 :Example:
 	::

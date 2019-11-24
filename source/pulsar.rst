@@ -1,13 +1,14 @@
 Pulsar configuration
 ====================
 
-In this step will be described how to configure the Pulsar endpoint and turn it on.
-The RabbitMQ URL, described in the step before, is mandatory to keep going.
+In this step we will describe how to configure the Pulsar endpoint and turn it on.
+The RabbitMQ URL, described in the step before (:doc:`rabbitmq`), is needed to proceed.
 
 Prerequisites: Ansible installation
 -----------------------------------
 
-To complete the pulsar configuration and turn it on, `Ansible <https://www.ansible.com>`_ is needed. Ansible can be easily installed following the `documentation <https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html>`_.
+To complete the pulsar configuration and turn it on, `Ansible <https://www.ansible.com>`_ is needed. Ansible can be easily installed following
+the `documentation <https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html>`_.
 
 Prerequisites: hostname configuration
 -------------------------------------
@@ -25,6 +26,8 @@ For example, on ``it02`` pulsar endpoint the fqdn hostname is: ``it02.pulsar.ga
 
 Pulsar configuration
 --------------------
+
+# is a fork needed?
 
 #. Clone the `Pulsar infrastructure playbook Github repository <https://github.com/usegalaxy-eu/pulsar-infrastructure-playbook>`_:
 
@@ -54,7 +57,7 @@ Pulsar configuration
      ...
      it02.pulsar.galaxyproject.eu ansible_connection=ssh ansible_user=centos
 
-#. Create job metrics file:
+#. Create a job metrics file, to define metrices that Galaxy collects during job run-time:
 
    ::
 
@@ -78,7 +81,9 @@ Pulsar configuration
        - { 'src': 'patches/params_submission.patch', 'basedir': '/opt/pulsar/venv/lib/python2.7/site-packages', 'state': 'present', 'backup': 'yes' }
        - { 'src': 'patches/hostname.patch', 'basedir': '/opt/pulsar/venv/lib/python2.7/site-packages', 'state': 'present', 'backup': 'yes' }
 
-   where the ``<rabbit_mq_usegalaxy.eu_url>`` is the RabbitMQ url, retrieved from useGalaxy.eu.
+## is the UUID patch still needed?
+
+   where the ``<rabbit_mq_usegalaxy.eu_url>`` is the RabbitMQ url, retrieved from the useGalaxy.eu admins.
 
 #. Create a template yaml file for your endpoint:
 

@@ -14,7 +14,7 @@ Pre-tasks
 
 .. warning::
 
-   Source the tenant RC file before to start the installation procedure, otherwise Terraform will not be able to perform resources creation and configuration.
+   Source the tenant RC file (see section :doc:`requirements`) before to start the installation procedure, otherwise Terraform will not be able to perform resources creation and configuration.
 
 #. Fork the usegalaxy.eu GitHub repository `pulsar-infrastructure-playbook <https://github.com/usegalaxy-eu/pulsar-infrastructure-playbook>`_.
 
