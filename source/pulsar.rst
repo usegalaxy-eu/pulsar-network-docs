@@ -30,57 +30,35 @@ Pulsar configuration
 
 #. Clone the `Pulsar infrastructure playbook Github repository <https://github.com/usegalaxy-eu/pulsar-infrastructure-playbook>`_:
 
-::
+   ::
 
-  git clone https://github.com/usegalaxy-eu/pulsar-infrastructure-playbook.git
+     git clone https://github.com/usegalaxy-eu/pulsar-infrastructure-playbook.git
 
-#. Enter in the ``pulsar-infrastructure-playbook`` directory:
+#. Creates several needed files
+
+   Enter in the ``pulsar-infrastructure-playbook`` directory:
 
    ::
 
      cd pulsar-infrastructure-playbook
 
-#. Update the ``inventory`` file, adding an entry for your Pulsar endpoint:
+   and execute:
 
    ::
 
-     [pulsarservers]
-     ...
-     <pulsar-endpoint-name> ansible_connection=ssh ansible_user=centos
+     make preparation FQDN=pulsar-fqdn-hostname
 
-   For example the it02 configuration is:
+   "Make" makes these changes:
 
-   ::
+     - Updates the ``inventory`` file, adding an entry for your Pulsar endpoint
+     - creates a job_metrics file into file/``pulsar-fqdn-hostname``
+     - creates an host var file into host_vars/``pulsar-fqdn-hostname``
+     - Create a template yaml file for your endpoint into templates/``pulsar-fqdn-hostname``
 
-     [pulsarservers]
-     ...
-     it02.pulsar.galaxyproject.eu ansible_connection=ssh ansible_user=centos
 
-#. Create job metrics file:
+#. Revise/update all the files created in the step above accordingly with your setup requirements.
 
-   ::
-
-     cd pulsar-infrastructure-playbook/files
-
-     mkdir <pulsar-endpoint-name>
-
-     cp job_metrics_conf.xml <pulsar-endpoint-name>/
-
-#. Create the host var file for your Pulsar endpoint ``pulsar-infrastructure-playbook/host_vars/<pulsar-endpoint-name`` with your favourite editor and add the following lines:
-
-   ::
-
-     message_queue_url : "<rabbit_mq_usegalaxy.eu_url>"
-
-   where the ``<rabbit_mq_usegalaxy.eu_url>`` is the RabbitMQ url, retrieved from useGalaxy.eu. If you need to upload this file to a public git repository, take care to encrypt it before using `Ansible Vault <https://docs.ansible.com/ansible/latest/user_guide/vault.html>`_.
-
-#. Create a template yaml file for your endpoint:
-
-   ::
-
-     cp -r pulsar-infrastructure-playbook/de01.pulsar.galaxyproject.eu pulsar-infrastructure-playbook/<pulsar-endpoint-name>
-
-#. It is now possibile to configure Pulsar using the Makefile.
+#. Configure the Pulsar endpoint using the Makefile.
 
    First of all, check if everything is fine with:
 
@@ -88,7 +66,7 @@ Pulsar configuration
 
      $ make check
 
-   and, finally, apply changes to Pulsare and turn it on:
+   and, finally, apply changes to Pulsar and turn it on:
 
    ::
 

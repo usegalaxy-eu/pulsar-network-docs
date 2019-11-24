@@ -9,7 +9,7 @@ Navigate into the Pulsar infrastructure directory:
 
   cd pulsar-infrastructure
 
-and run:
+and execute:
 
 ::
 
