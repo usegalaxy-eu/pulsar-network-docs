@@ -18,6 +18,7 @@ This documentation shows how to install and configure a Pulsar network endpoint 
    :maxdepth: 2
    :caption: Pulsar Endpoint Configuration
 
+   introduction
    requirements
    pretasks
    build_pulsar_node

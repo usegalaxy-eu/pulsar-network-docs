@@ -1,26 +1,15 @@
 Requirements
 ============
 
-This framework exploits `HashiCorp Terraform <https://www.terraform.io/>`_ to perform the installation and configuration of a Pulsar Endpoint on OpenStack.
-
-The Terraform script needs to access an OpenStack cloud via API to:
-
-- upload a VM image of 4GB (preferred, but we support also a preloading via the Dashboard interface);
-- access an ipv4 external network (means a network that can reach internet);
-- the external network has a DHCP server enabled that can provide 1 public IP;
-- create an ipv4 private network for the VMs (preferred, but we support also to use a pre-existent network of this kind);
-- create a router to bridge the private network to the external network (optional, if this feature is provided by the Cloud network infrastructure);
-- create one ``central manager`` where all services are installed;
-- create one NFS server;
-- create N worker nodes;
-- attach a storage volume to the NFS server;
-- create three secgroups;
-- upload an ssh public key to access the Central Manager VM.
-
 Software needed
 ---------------
 
-Make and Unzip are needed to follow this instruction. You can install them on a Linux machine as described here:
+Ansible, Make and Unzip are needed to follow this instruction.
+
+`Ansible <https://www.ansible.com>`_  can be easily installed following the `documentation <https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html>`_.
+
+
+Make and Unzip can be installed on a Linux machine as described here:
 
 On Ubuntu 18.04
 ::
@@ -52,7 +41,16 @@ Pulsar need both private and public network to properly work. Moreover, the priv
 VGCN image
 ----------
 
-The Pulsar network exploits a Virtual Image, named `VGCN <https://github.com/usegalaxy-eu/vgcn>`_, with everything necessary to create a Pulsar Network node already inside. This image must be available in your Tenant.
+The Pulsar network exploits a Virtual Image, named `VGCN <https://github.com/usegalaxy-eu/vgcn>`_, with everything necessary to create a Pulsar Network node already inside, like:
+
+    - HTCondor
+    - Pulsar
+    - NFS
+    - CVMFS
+    - Singularity
+    - Docker
+
+This image must be available in your Tenant.
 
 Depending on the OpenStack configuration you will be available to upload the image by URL or not. In the first case the image can be installed straightforwardly using the :doc:`pretasks` recipes.
 

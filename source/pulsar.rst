@@ -4,24 +4,26 @@ Pulsar configuration
 In this step will be described how to configure the Pulsar endpoint and turn it on.
 The RabbitMQ URL, described in the step before, is mandatory to keep going.
 
-Prerequisites: Ansible installation
------------------------------------
+Prerequisites
+-------------
 
-To complete the pulsar configuration and turn it on, `Ansible <https://www.ansible.com>`_ is needed. Ansible can be easily installed following the `documentation <https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html>`_.
-
-Prerequisites: hostname configuration
--------------------------------------
-As we need to refer to a proper fqdn hostname for your Pulsar server, if it doesn't has it you can easily create one into your local machine in this way:
+hostname configuration
+~~~~~~~~~~~~~~~~~~~~~~
+We need to refer to a proper `FQDN <https://en.wikipedia.org/wiki/Fully_qualified_domain_name>`_ hostname for your Pulsar server, if it doesn't has it you can easily create one into your local machine in this way:
 
 Add the following line to your `/etc/hosts` file:
 
 ::
 
-  <Central-Manager-Public-IP-address> it02.pulsar.galaxyproject.eu <pulsar-endpoint-name>
+  <Central-Manager-Public-IP-address> <pulsar-fqdn-hostname> <pulsar-endpoint-name>
 
-Where the ``Central-Manager-Public-IP-address`` is the public IP address of the Central Manager VM and the ``pulsar-endpoint-name`` is the custom name of your endpoint.
+Where the ``Central-Manager-Public-IP-address`` is the public IP address of the Central Manager VM, ``<pulsar-fqdn-hostname>`` is the FQDN hostname and the ``pulsar-endpoint-name`` is the custom name of your endpoint.
 
-For example, on ``it02`` pulsar endpoint the fqdn hostname is: ``it02.pulsar.galaxyproject.eu``
+For example:
+
+- ``it02`` is the ``pulsar-endpoint-name``
+- ``it02.pulsar.galaxyproject.eu`` is the ``<pulsar-fqdn-hostname>``
+- ``90.147.170.170`` is the ``Central-Manager-Public-IP-address``
 
 Pulsar configuration
 --------------------
@@ -69,16 +71,8 @@ Pulsar configuration
    ::
 
      message_queue_url : "<rabbit_mq_usegalaxy.eu_url>"
-     
-     copy_metrics_plugins: false
-     
-     apply_patches: true
-     patches_to_apply:
-       - { 'src': 'patches/uuid.patch', 'basedir': '/opt/pulsar/venv/lib/python2.7/site-packages', 'state': 'present', 'backup': 'yes' }\
-       - { 'src': 'patches/params_submission.patch', 'basedir': '/opt/pulsar/venv/lib/python2.7/site-packages', 'state': 'present', 'backup': 'yes' }
-       - { 'src': 'patches/hostname.patch', 'basedir': '/opt/pulsar/venv/lib/python2.7/site-packages', 'state': 'present', 'backup': 'yes' }
 
-   where the ``<rabbit_mq_usegalaxy.eu_url>`` is the RabbitMQ url, retrieved from useGalaxy.eu.
+   where the ``<rabbit_mq_usegalaxy.eu_url>`` is the RabbitMQ url, retrieved from useGalaxy.eu. If you need to upload this file to a public git repository, take care to encrypt it before using `Ansible Vault <https://docs.ansible.com/ansible/latest/user_guide/vault.html>`_.
 
 #. Create a template yaml file for your endpoint:
 
@@ -99,3 +93,4 @@ Pulsar configuration
    ::
 
      $ make apply
+
