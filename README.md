@@ -1,4 +1,4 @@
-![Documentation Status](https://readthedocs.org/projects/pulsar-network/badge/?version=latest)
+[![Documentation](https://readthedocs.org/projects/pulsar-network/badge/?version=latest)](https://pulsar-network.readthedocs.io/en/latest/)
 
 # Pulsar networks docs
 
