@@ -1,12 +1,15 @@
 useGalaxy.eu configuration
 ==========================
 
-The last step in Pulsar endpoint configuration is to enable your endpoint on useGalaxy.eu, thus allowing it to send jobs to the new endpoint. Therefore a new destination and a new runner needs to be added to usegalaxy.eu.
+Your endpoint is now able to take jobs!
+The last step is to enable your endpoint on useGalaxy.eu, thus allowing the European Galaxy Server
+to send jobs to the new endpoint. Therefore a new destination and a new runner needs to be added to UseGalaxy.eu.
+As the entire configuration of the European Galaxy Server is available on GitHub, you can do this as well.
 
 Destination creation
 --------------------
 
-Edit the file ``infrastructure-playbook/files/galaxy/dynamic_rules/usegalaxy/destination_specifications.yaml``, by adding at the end a new destination.
+Edit the file ``infrastructure-playbook/files/galaxy/dynamic_rules/usegalaxy/destination_specifications.yaml`` and add at the end a new destination.
 
 ::
 
@@ -34,9 +37,10 @@ Edit the file ``infrastructure-playbook/files/galaxy/dynamic_rules/usegalaxy/des
 
 - Replace the ``<custom_suffix>`` using a code which identifies your country and a progressive number indicating the pulsar installation, e.g. ``it02`` for the second installation of Pulsar in Italy.
 
-- The ``<number-of-available-cpus-per-node>`` is the number of the available worker nodes cores.
+- The ``<number-of-available-cpus-per-node>`` is the number of the available cores each Pulsar worker node provides.
 
 - The ``<ram-available-per-node>`` is the RAM of the Pulsar worker nodes in GB. This number will be converted in MB, thus multiplied by 1024. Therefore, to to avoid out of range memory values, we recommends to use a conservative value, for example by decreasing the value entered by 1 GB.
+
 
 Runner creation
 ---------------

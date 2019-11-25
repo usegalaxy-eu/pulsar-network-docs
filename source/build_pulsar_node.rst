@@ -1,7 +1,8 @@
 Building the Pulsar endpoint
 ============================
 
-After running the pre-tasks recipes and having properly edited the ``vars.tf`` file (see section :doc:`vars_tf`), we are ready to create the Pulsar endpoint.
+After running the pre-tasks recipes and having properly edited the ``vars.tf`` file (see section :doc:`vars_tf`),
+we are ready to create the Pulsar endpoint.
 
 Navigate into the Pulsar infrastructure directory:
 
@@ -43,12 +44,14 @@ Here, for example, the OpenStack dashboard showing a Pulsar endpoint with the Ce
    :scale: 25%
    :align: center
 
-The Pulsar endpoint is now configured, but Pulsar is still turned off. In the next step it will be properly configured to talk with `usegalaxy.eu <https://usegalaxy.eu>`_ RabbitMQ and turned on.
+The Pulsar endpoint is now configured, but Pulsar is still turned off.
+In the next step we will configure Pulsar to talk to `usegalaxy.eu <https://usegalaxy.eu>`_ RabbitMQ and enable it.
 
 Testing SSH access
 ----------------------------------
 
-The SSH public key configured in the ``vars.tf`` file is added to the ``authorized_keys`` file of the Central Manager VM. To login to this VM just type:
+The SSH public key configured in the ``vars.tf`` file was already automatically added to the ``authorized_keys``
+file of the Central Manager VM. To login to this VM just type:
 
 ::
 

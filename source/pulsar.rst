@@ -1,8 +1,8 @@
 Pulsar configuration
 ====================
 
-In this step will be described how to configure the Pulsar endpoint and turn it on.
-The RabbitMQ URL, described in the step before, is mandatory to keep going.
+In this step we will describe how to configure the Pulsar endpoint and turn it on.
+The RabbitMQ URL, described in the step before (:doc:`rabbitmq`), is needed to proceed.
 
 Prerequisites
 -------------
@@ -27,6 +27,8 @@ For example:
 
 Pulsar configuration
 --------------------
+
+# is a fork needed?
 
 #. Clone the `Pulsar infrastructure playbook Github repository <https://github.com/usegalaxy-eu/pulsar-infrastructure-playbook>`_:
 
