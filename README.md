@@ -1,3 +1,5 @@
+![Documentation Status](https://readthedocs.org/projects/pulsar-network/badge/?version=latest)
+
 # Pulsar networks docs
 
 The Pulsar Network is wide job execution system distributed across several European datacenters, allowing to scale Galaxy instances computing power over heterogeneous resources.
