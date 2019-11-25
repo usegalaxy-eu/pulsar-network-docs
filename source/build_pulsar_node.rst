@@ -10,7 +10,7 @@ Navigate into the Pulsar infrastructure directory:
 
   cd pulsar-infrastructure
 
-and run:
+and execute:
 
 ::
 
@@ -47,7 +47,7 @@ Here, for example, the OpenStack dashboard showing a Pulsar endpoint with the Ce
 The Pulsar endpoint is now configured, but Pulsar is still turned off.
 In the next step we will configure Pulsar to talk to `usegalaxy.eu <https://usegalaxy.eu>`_ RabbitMQ and enable it.
 
-Testing Central Manager SSH access
+Testing SSH access
 ----------------------------------
 
 The SSH public key configured in the ``vars.tf`` file was already automatically added to the ``authorized_keys``
@@ -60,3 +60,6 @@ file of the Central Manager VM. To login to this VM just type:
 .. figure:: _static/img/cm_ssh.png
    :scale: 40%
    :align: center
+
+Terraform scripts also add a VGCN private ssh key to the CM and the public one to the other nodes.
+So after successfully logged in to the CM, you can reach without other impediments the rest of the network.
