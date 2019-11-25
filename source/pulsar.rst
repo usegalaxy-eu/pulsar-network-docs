@@ -53,7 +53,7 @@ Pulsar configuration
    "Make" makes these changes:
 
      - Updates the ``inventory`` file, adding an entry for your Pulsar endpoint
-     - creates a job_metrics file into file/``pulsar-fqdn-hostname``
+     - creates a job_metrics file into files/``pulsar-fqdn-hostname``
      - creates an host var file into host_vars/``pulsar-fqdn-hostname``
      - Create a template yaml file for your endpoint into templates/``pulsar-fqdn-hostname``
 
