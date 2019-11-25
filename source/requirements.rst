@@ -4,7 +4,7 @@ Requirements
 Software needed
 ---------------
 
-Ansible, Make and Unzip are needed to follow this instruction.
+**Ansible, Make and Unzip** are needed to follow this instruction.
 
 `Ansible <https://www.ansible.com>`_  can be easily installed following the `documentation <https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html>`_.
 

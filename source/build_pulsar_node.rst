@@ -61,5 +61,7 @@ file of the Central Manager VM. To login to this VM just type:
    :scale: 40%
    :align: center
 
-Terraform scripts also add a VGCN private ssh key to the CM and the public one to the other nodes.
-So after successfully logged in to the CM, you can reach without other impediments the rest of the network.
+.. note::
+
+   Terraform scripts also add a VGCN private ssh key to the CM and the public one to the other nodes.
+   So after successfully logged in to the CM, you can reach, without other impediments, the rest of the network.
