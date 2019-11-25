@@ -52,7 +52,7 @@ repository to create a new RabbitMQ account for your Pulsar endpoint.
          - /pulsar/galaxy_it02
 
 #. Make a Pull Request to the original repository and contact the usegalaxy.eu admins.
-Once merged the useGalaxy.eu team will provide you the RabbitMQ queue URL by mail,
+Once merged the UseGalaxy.eu team will provide you the RabbitMQ queue URL by mail,
 which needs to be added to your Pulsar configuration as described in the next step.
 
    .. figure:: _static/img/rabbitmq_PR.png
