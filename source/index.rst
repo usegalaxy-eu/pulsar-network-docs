@@ -6,13 +6,18 @@
 Welcome to Pulsar-Network's documentation!
 ==========================================
 
-The Pulsar Network is wide job execution system distributed across several European datacenters, allowing to scale Galaxy instances computing power over heterogeneous resources.
+The Pulsar Network is wide job execution system distributed across several
+European datacenters, allowing to scale Galaxy instances computing power
+over heterogeneous resources.
 
 .. figure:: _static/img/nodes.png
    :scale: 40%
    :align: center
 
-This documentation shows how to install and configure a Pulsar network endpoint on an OpenStack Cloud infrastructure and how to connect it to useGalaxy.eu server. The same Pulsar endpoint can be associated to any Galaxy instance, if properly configured.
+This documentation shows how to install and configure a Pulsar network
+endpoint on an OpenStack Cloud infrastructure and how to connect it to
+useGalaxy.eu server. The same Pulsar endpoint can be associated to any Galaxy
+instance, if properly configured.
 
 .. toctree::
    :maxdepth: 2
@@ -26,6 +31,7 @@ This documentation shows how to install and configure a Pulsar network endpoint 
    pulsar
    galaxy
    vars_tf
+   benchmark
 
 
 Indices and tables
