@@ -2,7 +2,7 @@ Benchmarking your Pulsar setup
 ==============================
 
 To determine the performance of your Pulsar setup, you can use the
-`GalaxyBenchmarker <https://github.com/AndreasSko/Galaxy-Benchmarker>`_.
+`GalaxyBenchmarker <https://github.com/usegalaxy-eu/GalaxyBenchmarker>`_.
 This is a framework that allows for easy benchmarking of various Galaxy
 job destinations.
 
@@ -10,7 +10,7 @@ As a start, clone the repository to your local workstation:
 
     ::
 
-     git clone https://github.com/AndreasSko/Galaxy-Benchmarker
+     git clone https://github.com/usegalaxy-eu/GalaxyBenchmarker.git
 
 A docker-compose setup is already provided that includes InfluxDB and
 Grafana for easy analysis of the metrics.
@@ -22,7 +22,7 @@ The benchmarker is configured using a yaml-configuration file. You can
 find a basic example in ``benchmark_config.yml.usegalaxyeu``. As a start,
 rename it to benchmark_config.yml and fill in the credentials for your
 regular UseGalaxy.eu user (a deeper explanation of the configuration
-can be found at https://github.com/AndreasSko/Galaxy-Benchmarker).
+can be found at https://github.com/usegalaxy-eu/GalaxyBenchmarker).
 To later benchmark your Pulsar setup, you will need an additional user
 for which UseGalaxy.eu is configured to only route jobs to your setup.
 Also add the user key for this user to the config file under
