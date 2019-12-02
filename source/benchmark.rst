@@ -6,6 +6,8 @@ To determine the performance of your Pulsar setup, you can use the
 This is a framework that allows for easy benchmarking of various Galaxy
 job destinations.
 
+In the following steps, we will make use of a `docker-compose <https://docs.docker.com/compose>`_ setup.
+
 As a start, clone the repository to your local workstation:
 
     ::
