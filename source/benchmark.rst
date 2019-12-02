@@ -25,8 +25,10 @@ find a basic example in ``benchmark_config.yml.usegalaxyeu``. As a start,
 rename it to benchmark_config.yml and fill in the credentials for your
 regular UseGalaxy.eu user (a deeper explanation of the configuration
 can be found at https://github.com/usegalaxy-eu/GalaxyBenchmarker).
-To later benchmark your Pulsar setup, you will need an additional user
-for which UseGalaxy.eu is configured to only route jobs to your setup.
+To later benchmark your Pulsar setup, we can configure your UseGalaxy.eu user 
+(or an additional one) to launch all jobs against your setup. For this, send an 
+email to contact@usegalaxy.eu.
+
 Also add the user key for this user to the config file under
 ``destinations``.
 
