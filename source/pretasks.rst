@@ -16,7 +16,7 @@ Pre-tasks
 
    Source the tenant RC file (see section :doc:`requirements`) before to start the installation procedure, otherwise Terraform will not be able to perform resources creation and configuration.
 
-#. Fork the usegalaxy.eu GitHub repository `pulsar-infrastructure-playbook <https://github.com/usegalaxy-eu/pulsar-infrastructure-playbook>`_.
+#. Fork the usegalaxy.eu GitHub repository `pulsar-infrastructure <https://github.com/usegalaxy-eu/pulsar-infrastructure>`_.
 
 #. Locally clone the forked repository:
 
@@ -48,7 +48,7 @@ Pre-tasks
    ::
 
      $ ls test01
-     ext_network.tf pre_tasks.tf providers.tf vars.tf 
+     ext_network.tf pre_tasks.tf providers.tf vars.tf
 
 
 #. Edit the ``<workspace-name>/pre_tasks.tf`` file accordingly with your needs. It has three sections:
@@ -66,7 +66,7 @@ Pre-tasks
 
       All the variables available in the ``vars.tf`` file are described in the :doc:`vars_tf` section.
 
-#. Validate the terraform recipes configuration: 
+#. Validate the terraform recipes configuration:
 
    ::
 
