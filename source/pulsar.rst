@@ -9,7 +9,7 @@ Prerequisites
 
 hostname configuration
 ~~~~~~~~~~~~~~~~~~~~~~
-We need to refer to a proper `FQDN <https://en.wikipedia.org/wiki/Fully_qualified_domain_name>`_ hostname for your Pulsar server, if it doesn't has it you can easily create one into your local machine in this way:
+We need to refer to a proper `FQDN <https://en.wikipedia.org/wiki/Fully_qualified_domain_name>`_ hostname for your Pulsar server, if it doesn't have it you can easily create one into your local machine in this way:
 
 Add the following line to your `/etc/hosts` file:
 
@@ -73,4 +73,3 @@ Pulsar configuration
    ::
 
      $ make apply
-
