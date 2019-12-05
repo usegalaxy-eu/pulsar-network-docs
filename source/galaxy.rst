@@ -39,7 +39,7 @@ Edit the file ``infrastructure-playbook/files/galaxy/dynamic_rules/usegalaxy/des
 
 - The ``<number-of-available-cpus-per-node>`` is the number of the available cores each Pulsar worker node provides.
 
-- The ``<ram-available-per-node>`` is the RAM of the Pulsar worker nodes in GB. This number will be converted in MB, thus multiplied by 1024. Therefore, to to avoid out of range memory values, we recommends to use a conservative value, for example by decreasing the value entered by 1 GB.
+- The ``<ram-available-per-node>`` is the RAM of the Pulsar worker nodes in GB. This number will be converted in MB, thus multiplied by 1024. Therefore, to avoid out of range memory values, we recommends to use a conservative value, for example by decreasing the value entered by 1 GB.
 
 
 Runner creation
@@ -82,5 +82,3 @@ Finally, these changes must be merged to the main branch of the `infrastructure-
 .. figure:: _static/img/runner_pr.png
    :scale: 40%
    :align: center
-
-
