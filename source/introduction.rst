@@ -42,3 +42,9 @@ Usegalaxy.eu and the remote Pulsar endpoints will communicate through a RabbitMQ
 .. figure:: _static/img/architecture2.png
    :scale: 60%
    :align: center
+
+Dependencies
+~~~~~~~~~~~~
+
+All tools dependencies are resolved by UseGalaxy.eu through a container mechanism resolver providing a proper Singularity image for each job.
+Singularity images are made available locally through a distribution system enabled by a CVMFS servers network.
