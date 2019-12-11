@@ -5,4 +5,98 @@ Pulsar network connected to `useGalaxy.eu <https://usegalaxy.eu>`_ statistics pa
 
 .. raw:: html
 
-   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&from=1354783135885&to=1575621535885&var-time_interval=365d&panelId=69" width="700" height="320" frameborder="0"></iframe>
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&var-time_interval=365d&panelId=69" width="700" height="320" frameborder="0"></iframe>
+
+Pulsar network endpoints
+------------------------
+
+This information is calculated from the assigned ``galaxy_slots`` multiplied by ``runtime_seconds`` for each job. It will not calculate the exact CPU usage but it gives and approximation for what was allocated.
+
+
+----------------
+``de.NBI Cloud``
+----------------
+
+.. raw:: html
+
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=54" width="450" height="200" frameborder="0"></iframe>i
+
+---------------------
+``AG Backofen (HPC)``
+---------------------
+
+.. raw:: html
+
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=55" width="450" height="200" frameborder="0"></iframe>
+
+----------------------------------
+``Freiburg - de.NBI cloud - DE01``
+----------------------------------
+
+.. raw:: html
+
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=65" width="450" height="200" frameborder="0"></iframe>
+
+----------------------------------
+``Tübingen - de.NBI cloud - DE02``
+----------------------------------
+
+.. raw:: html
+
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=68" width="450" height="200" frameborder="0"></iframe>
+
+----------------------------------
+``Freiburg - GPUs - de.NBI cloud``
+----------------------------------
+
+.. raw:: html
+
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=71" width="450" height="200" frameborder="0"></iframe>
+
+---------------------------
+``CESNET - Czech Republic``
+---------------------------
+
+.. raw:: html
+
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=56" width="450" height="200" frameborder="0"></iframe>
+
+-------------------------------
+``Bari - ReCaS - Italy - IT01``
+-------------------------------
+
+.. raw:: html
+
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=66" width="450" height="200" frameborder="0"></iframe>
+
+-------------------------------
+``Bari - ReCaS - Italy - IT02``
+-------------------------------
+
+.. raw:: html
+
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=72" width="450" height="200" frameborder="0"></iframe>
+
+----------------------------------
+``Brussel - VIB - Belgium - BE01``
+----------------------------------
+
+.. raw:: html
+
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=67" width="450" height="200" frameborder="0"></iframe>
+
+----------------------------------------------
+``Lisbon - Tecnico ULisboa - Portugal - PT01``
+----------------------------------------------
+
+.. raw:: html
+
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=70" width="450" height="200" frameborder="0"></iframe>
+
+----------------------------------------------------
+``Rennes - GenOuest bioinformatics - France - FR01``
+----------------------------------------------------
+
+.. raw:: html
+
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=73" width="450" height="200" frameborder="0"></iframe>
