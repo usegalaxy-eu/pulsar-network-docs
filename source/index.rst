@@ -32,7 +32,7 @@ instance, if properly configured.
    galaxy
    vars_tf
    benchmark
-
+   status
 
 Indices and tables
 ==================
