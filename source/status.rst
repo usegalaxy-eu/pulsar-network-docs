@@ -10,7 +10,7 @@ Pulsar network connected to `useGalaxy.eu <https://usegalaxy.eu>`_ statistics pa
 Pulsar network endpoints
 ------------------------
 
-The Pulsar endpoints with the corresponding compute time are reported in the following. This is calculated from the assigned ``galaxy_slots`` multiplied by ``runtime_seconds`` for each job. It will not calculates the exact CPU usage but it gives and approximation for what was allocated.
+The Pulsar endpoints with the corresponding compute time are reported in the following. The compute time is calculated from the assigned ``galaxy_slots`` multiplied by ``runtime_seconds`` for each job. It will not calculates the exact CPU usage but it gives and approximation for what was allocated.
 
 
 ----------------
