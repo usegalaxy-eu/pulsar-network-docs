@@ -108,3 +108,11 @@ The Pulsar endpoints with the corresponding compute time are reported in the fol
 .. raw:: html
 
    <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=74" width="450" height="200" frameborder="0"></iframe>
+
+----------------------------------------------------
+``Espoo - CSC: IT Center for Science Ltd. - Finland - FI01``
+----------------------------------------------------
+
+.. raw:: html
+
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?panelId=75&orgId=1&refresh=15m" width="450" height="200" frameborder="0"></iframe>
