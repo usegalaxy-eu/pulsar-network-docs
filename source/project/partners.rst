@@ -1,6 +1,15 @@
 Our Partnerships
 =====================
 
+    .. figure:: ../_static/logos/unifr.png
+       :scale: 12%
+       :align: right
+
+| **UFR**
+| University of Freiburg
+| https://www.uni-freiburg.de/
+|
+
     .. figure:: ../_static/logos/denbi-logo-color.png
        :scale: 100%
        :align: right
@@ -64,6 +73,10 @@ Our Partnerships
     .. figure:: ../_static/logos/csc.png
        :scale: 30%
        :align: right
+
+| UIB
+| University of Bergen
+| https://www.uib.no/en
 
 | **CSC**
 | IT Center for Science Ltd.
