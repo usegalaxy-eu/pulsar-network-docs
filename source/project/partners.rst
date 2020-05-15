@@ -70,13 +70,17 @@ Our Partnerships
 | UK’s national synchrotron science facility
 | https://www.diamond.ac.uk/Home.html
 
-    .. figure:: ../_static/logos/csc.png
-       :scale: 30%
+    .. figure:: ../_static/logos/ugle1.jpg
+       :scale: 15%
        :align: right
 
 | UIB
 | University of Bergen
 | https://www.uib.no/en
+
+    .. figure:: ../_static/logos/csc.png
+       :scale: 30%
+       :align: right
 
 | **CSC**
 | IT Center for Science Ltd.
