@@ -47,7 +47,8 @@ Our Partnerships
 | Life sciences research institute, based in Flanders, Belgium
 | http://www.vib.be/en/Pages/default.aspx
 
-| Vlaam Supercomputer Centrum (VSC)
+| **VSC**
+| Vlaam Supercomputer Centrum 
 | https://www.vscentrum.be/
 
     .. figure:: ../_static/logos/tecnico_lisboa.png
