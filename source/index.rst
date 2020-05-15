@@ -32,7 +32,13 @@ instance, if properly configured.
    galaxy
    vars_tf
    benchmark
-   status
+
+.. toctree::
+   :maxdepth: 2
+   :caption: About Project
+
+   Partners <project/partners>
+   Status <project/status>
 
 Indices and tables
 ==================
