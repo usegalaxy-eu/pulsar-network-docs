@@ -16,9 +16,18 @@ Our Partnerships
 | **CESNET**
 | Association of universities of the Czech Republic and the Czech Academy of Sciences
 | https://www.cesnet.cz/
+|
 
+    .. figure:: ../_static/logos/ibiom.png
+       :scale: 60%
+       :align: right
 
-| **ReCaS/INFN**
+| **IBIOM-CNR**
+| Institute of Biomembranes, Bioenergetics and Molecular Biotechnologies
+| http://www.ibiom.cnr.it/
+
+| **ReCaS**
+| National Institute of Nuclear Physics (INFN) DataCenter
 | https://www.recas-bari.it/index.php/en/
 
     .. figure:: ../_static/logos/vib.png
@@ -28,6 +37,9 @@ Our Partnerships
 | **VIB**
 | Life sciences research institute, based in Flanders, Belgium
 | http://www.vib.be/en/Pages/default.aspx
+
+| Vlaam Supercomputer Centrum (VSC)
+| https://www.vscentrum.be/
 
     .. figure:: ../_static/logos/tecnico_lisboa.png
        :scale: 40%
