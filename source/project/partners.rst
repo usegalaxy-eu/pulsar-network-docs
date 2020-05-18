@@ -36,7 +36,7 @@ Our Partnerships
 | http://www.ibiom.cnr.it/
 
     .. figure:: ../_static/logos/recas.png
-       :scale: 23%
+       :scale: 20%
        :align: right
 
 | **ReCaS**
