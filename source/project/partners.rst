@@ -35,6 +35,10 @@ Our Partnerships
 | Institute of Biomembranes, Bioenergetics and Molecular Biotechnologies
 | http://www.ibiom.cnr.it/
 
+    .. figure:: ../_static/logos/recas.png
+       :scale: 23%
+       :align: right
+
 | **ReCaS**
 | National Institute of Nuclear Physics (INFN) DataCenter
 | https://www.recas-bari.it/index.php/en/
