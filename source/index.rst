@@ -31,7 +31,13 @@ instance, if properly configured.
    pulsar
    galaxy
    vars_tf
-   benchmark
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Special Topics
+
+   Benchmark <topics/benchmark>
+   GPUs <topics/gpus>
 
 .. toctree::
    :maxdepth: 2

@@ -9,7 +9,7 @@ Navigate in the Pulsar infrastructure directory:
 
   cd pulsar-infrastructure
 
-and edit the file ``<workspace-name>/vars.tf`` with your favourite text ediitor.
+and edit the file ``<workspace-name>/vars.tf`` with your favourite text editor.
 
 
 Configuration options
