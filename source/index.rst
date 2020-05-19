@@ -38,6 +38,7 @@ instance, if properly configured.
 
    Benchmark <topics/benchmark>
    GPUs <topics/gpus>
+   Staging actions <topics/staging>
 
 .. toctree::
    :maxdepth: 2
