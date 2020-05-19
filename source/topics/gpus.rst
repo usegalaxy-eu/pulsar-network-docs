@@ -1,13 +1,13 @@
 Adding GPUs to your Pulsar setup
 ================================
 
-Nowadays is quite common to use GPUs to accelerate high-intensive computational tasks leveraging
-the intrinsic parallel computation capability of this kind of hardware. If your Cloud provider
-makes GPUs available to your tenant, they can be effectively applied in many scientific contexts like the
+GPU's devices are presently widely adopted to accelerate high-intensive computational tasks, leveraging the intrinsic
+parallel computation capability of this kind of hardware.  If your Cloud provider
+makes GPUs available to your tenant, you can effectively apply them in many scientific contexts like the
 molecular docking, prediction and searching of molecular structures or machine learning applications.
 
 
-In the following steps, we describe how you can be added a GPU device to your computation
+In the following steps, we describe how to add a GPU device to the computation
 cluster created following the instructions provided in the section above.
 
 Prerequisites
