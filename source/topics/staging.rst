@@ -3,11 +3,12 @@ Retries of the staging actions
 
 The Pulsar setup described in these pages provides that the staging actions are carried out
 by the Pulsar server itself.
+
 Several control parameters have been added to the configuration to ensure reliable communication between the Galaxy server and the remote Pulsar server.
 The aim of these parameters is to control the retrying of staging actions in the event of
 a failure.
 
-Default values are:
+Parameters and default values are:
 
   ::
 

@@ -37,7 +37,13 @@ but the more the better.
 Architecture
 ------------
 
-Usegalaxy.eu and the remote Pulsar endpoints will communicate through a RabbitMQ queue; in this way, the Pulsar endpoints don't need to expose any open ports to the external.
+Usegalaxy.eu and the remote Pulsar endpoints communicate through a RabbitMQ queue.
+
+The interesting aspect of this setup is that the Pulsar endpoints don't need to expose
+any network ports to the external, because:
+
+- the Galaxy and the Pulsar server exchange messages through RabbitMQ.
+- the Pulsar server starts all the staging actions, reaching the Galaxy server through its API.
 
 .. figure:: _static/img/architecture2.png
    :scale: 60%
