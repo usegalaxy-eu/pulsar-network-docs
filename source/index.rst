@@ -39,6 +39,7 @@ instance, if properly configured.
    Benchmark <topics/benchmark>
    GPUs <topics/gpus>
    Staging actions <topics/staging>
+   Jump host <topics/jump_host>
 
 .. toctree::
    :maxdepth: 2
