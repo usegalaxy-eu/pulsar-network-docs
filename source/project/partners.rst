@@ -39,8 +39,8 @@ Our Partnerships
        :scale: 20%
        :align: right
 
-| **ReCaS**
-| National Institute of Nuclear Physics (INFN) DataCenter
+| **ReCaS-Bari**
+| National Institute of Nuclear Physics (INFN-Bari) DataCenter
 | https://www.recas-bari.it/index.php/en/
 
     .. figure:: ../_static/logos/vib.png
