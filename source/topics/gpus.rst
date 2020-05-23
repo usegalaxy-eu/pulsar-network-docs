@@ -26,7 +26,7 @@ The current `VGCN image`_ provides the following packages to your VMs:
 - Docker version 19.03.8
 - `NVIDIA Container toolkit`_ 1.1.1
 
-
+Pay attention, the NVIDIA software will be installed, by a Cloud-init task, at runtime during the first boot. 
 
 Configuration
 -------------
