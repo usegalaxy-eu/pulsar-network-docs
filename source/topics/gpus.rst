@@ -23,8 +23,8 @@ The VGCN image provides all the software need to enable an **NVIDIA** GPU to sub
 The current `VGCN image`_ provides the following packages to your VMs:
 
 - cuda toolkit 10.1
-- Docker version 19.03.7
-- `NVIDIA Container toolkit`_ 1.0.5
+- Docker version 19.03.8
+- `NVIDIA Container toolkit`_ 1.1.1
 
 
 
