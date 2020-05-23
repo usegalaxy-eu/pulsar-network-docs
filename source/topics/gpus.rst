@@ -125,5 +125,5 @@ and the same with the latest CUDA docker image:
 
 
 .. _preparation step: ../pretasks.html#pre-tasks
-.. _VGCN image: https://github.com/usegalaxy-eu/pulsar-infrastructure/blob/ef3ba68abb9fef79a8d159687b912d25c901d90d/tf/vars.tf#L26
+.. _VGCN image: https://github.com/usegalaxy-eu/pulsar-infrastructure/blob/master/tf/vars.tf#L26
 .. _NVIDIA Container toolkit: https://github.com/NVIDIA/nvidia-container-runtime
