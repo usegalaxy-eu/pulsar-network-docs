@@ -51,6 +51,10 @@ Our Partnerships
 | Life sciences research institute, based in Flanders, Belgium
 | http://www.vib.be/en/Pages/default.aspx
 
+    .. figure:: ../_static/logos/vlaams.png
+       :scale: 90%
+       :align: right
+
 | **VSC**
 | Vlaam Supercomputer Centrum 
 | https://www.vscentrum.be/
