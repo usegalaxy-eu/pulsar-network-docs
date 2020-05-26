@@ -30,5 +30,18 @@ For each action (input/preprocess and output/postprocess), you can specify:
 - by how much the interval is increased for each retry (in seconds).
 - the maximum number of seconds to sleep between retries.
 
+In the following box, as an example, we have the values used in a Pulsar server with a really problematic network connection:
+
+  ::
+
+        preprocess_action_max_retries: 30
+        preprocess_action_interval_start: 2
+        preprocess_action_interval_step: 10
+        preprocess_action_interval_max: 300
+        postprocess_action_max_retries: 30
+        postprocess_action_interval_start: 2
+        postprocess_action_interval_step: 10
+        postprocess_action_interval_max: 300
+
 
 .. _app.yml: https://github.com/usegalaxy-eu/pulsar-infrastructure-playbook/blob/master/templates/app.yml.j2
