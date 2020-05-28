@@ -66,13 +66,15 @@ Our Partnerships
 | **Tecnico ULisboa**
 | Universidade de Lisboa
 | https://tecnico.ulisboa.pt/en/
+|
 
     .. figure:: ../_static/logos/genouest.png
        :scale: 50%
        :align: right
 
 | **GenOuest**
-| Regional bioinformatics platform in Rennes, France. Member of the national institute IFB.
+| Regional bioinformatics platform in Rennes, France. 
+| Member of the national institute IFB.
 | https://www.genouest.org/
 
     .. figure:: ../_static/logos/Diamond-logo-colour.png
