@@ -56,7 +56,7 @@ Our Partnerships
        :align: right
 
 | **VSC**
-| Vlaam Supercomputer Centrum 
+| Vlaam Supercomputer Centrum
 | https://www.vscentrum.be/
 
     .. figure:: ../_static/logos/tecnico_lisboa.png
@@ -67,8 +67,12 @@ Our Partnerships
 | Universidade de Lisboa
 | https://tecnico.ulisboa.pt/en/
 
+    .. figure:: ../_static/logos/genouest.png
+       :scale: 50%
+       :align: right
+
 | **GenOuest**
-| Technological platform of Rennes 1 University
+| Regional bioinformatics platform in Rennes, France. Member of the national institute IFB.
 | https://www.genouest.org/
 
     .. figure:: ../_static/logos/Diamond-logo-colour.png

@@ -94,7 +94,7 @@ The Pulsar endpoints with the corresponding compute time are reported in the fol
    <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=70" width="450" height="200" frameborder="0"></iframe>
 
 ----------------------------------------------------
-``Rennes - GenOuest bioinformatics - France - FR01``
+``Rennes - GenOuest - France - FR01``
 ----------------------------------------------------
 
 .. raw:: html
