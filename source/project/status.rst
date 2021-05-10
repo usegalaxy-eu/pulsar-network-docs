@@ -19,7 +19,7 @@ The Pulsar endpoints with the corresponding compute time are reported in the fol
 
 .. raw:: html
 
-   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=54" width="450" height="200" frameborder="0"></iframe>i
+   <iframe src="https://stats.galaxyproject.eu/d-solo/000000012/galaxy-user-statistics?orgId=1&refresh=15m&panelId=54" width="450" height="200" frameborder="0"></iframe>
 
 ---------------------
 ``AG Backofen (HPC)``
