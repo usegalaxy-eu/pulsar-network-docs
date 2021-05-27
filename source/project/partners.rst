@@ -42,6 +42,7 @@ Our Partnerships
 | **ReCaS-Bari**
 | National Institute of Nuclear Physics (INFN-Bari) DataCenter
 | https://www.recas-bari.it/index.php/en/
+| INFN and ReCaS-Bari are also part of EGI-ACE H2020 project)
 
     .. figure:: ../_static/logos/vib.png
        :scale: 100%
