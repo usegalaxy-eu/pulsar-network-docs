@@ -56,7 +56,7 @@ For example the runner added for ``it02`` Pulsar node is:
           - id: pulsar_eu_it02
             load: galaxy.jobs.runners.pulsar:PulsarMQJobRunner
             params:
-              amqp_url: "pyamqp://galaxy_it02:{{ rabbitmq_password_galaxy_it02 }}@proxy.internal.galaxyproject.eu:5671//pulsar/galaxy_it02?ssl=1"
+              amqp_url: "pyamqp://galaxy_it02:{{ rabbitmq_password_galaxy_it02 }}@mq.galaxyproject.eu:5671//pulsar/galaxy_it02?ssl=1"
               galaxy_url: "https://usegalaxy.eu"
               manager: production
               amqp_acknowledge: True

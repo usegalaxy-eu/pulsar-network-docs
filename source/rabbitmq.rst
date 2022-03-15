@@ -12,7 +12,7 @@ repository to create a new RabbitMQ account for your Pulsar endpoint.
 
      git clone https://github.com/<user-name>/infrastructure-playbook.git
 
-#. Edit the file ``infrastructure-playbook/group_vars/proxy-internal.yml`` with your favourite text editor:
+#. Edit the file ``infrastructure-playbook/group_vars/mq.yml`` with your favourite text editor:
 
    - in the `rabbitmq_users` section create a new user adding the following lines:
 
@@ -63,4 +63,4 @@ which needs to be added to your Pulsar configuration as described in the next st
 
    ::
 
-     pyamqp://galaxy_it02:*****@proxy.internal.galaxyproject.eu:5671//pulsar/galaxy_it02?ssl=1
+     pyamqp://galaxy_it02:*****@mq.galaxyproject.eu:5671//pulsar/galaxy_it02?ssl=1
