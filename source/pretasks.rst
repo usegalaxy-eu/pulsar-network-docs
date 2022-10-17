@@ -65,6 +65,10 @@ Pre-tasks
    .. note::
 
       All the variables available in the ``vars.tf`` file are described in the :doc:`vars_tf` section.
+#. Initialize Terraform:
+   ::
+    
+    WS=test01 make init
 
 #. Validate the terraform recipes configuration:
 
