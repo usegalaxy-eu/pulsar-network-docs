@@ -46,8 +46,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Pulsar-Network'
-copyright = u'2019, Gianmauro Cuccuru, Marco Antonio Tangaro'
-author = u'Gianmauro Cuccuru, Marco Antonio Tangaro'
+copyright = u'2022, Gianmauro Cuccuru, Marco Antonio Tangaro'
+author = u'Gianmauro Cuccuru, Marco Antonio Tangaro, Hakan Bayindir'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
