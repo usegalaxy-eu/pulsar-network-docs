@@ -10,13 +10,23 @@ The Pulsar Network is wide job execution system distributed across several
 European datacenters, allowing to scale Galaxy instances computing power
 over heterogeneous resources.
 
-.. figure:: _static/img/nodes.png
+.. figure:: _static/img/eosc_esg_logo.svg
+   :scale: 30%
+   :align: center
+
+Currently, the Pulsar Network is developed in the context of the `Horizon Europe
+EuroScienceGateway project <https://galaxyproject.org/projects/esg/>`_,
+enabling end-users to easily access and exploit remote compute resources,
+and resource providers to offer compute resources for scientific
+purposes through the Galaxy interface.
+
+.. figure:: _static/img/esg_pulsar_network_contrib.png
    :scale: 40%
    :align: center
 
 This documentation shows how to install and configure a Pulsar network
 endpoint on an OpenStack Cloud infrastructure and how to connect it to
-useGalaxy.eu server. The same Pulsar endpoint can be associated to any Galaxy
+useGalaxy.* server. The same Pulsar endpoint can be associated to any Galaxy
 instance, if properly configured.
 
 .. toctree::
