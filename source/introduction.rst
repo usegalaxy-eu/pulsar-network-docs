@@ -1,9 +1,24 @@
 Introduction
 ============
 
-This framework exploits `HashiCorp Terraform <https://www.terraform.io/>`_ to perform the installation and configuration of a Pulsar Endpoint on OpenStack using a Virtual imaged named VGCN (see :doc:`requirements` for more details)
+`Pulsar <https://pulsar.readthedocs.io/>`_ consist of a Python server application that accepts jobs from a Galaxy server, submitting them to a local resource and then sends the results back to the originating Galaxy server once processed.
 
-The Terraform script needs to access an OpenStack cloud via API to:
+The Open Infrastructure is a set of tools to have ready-to-go Pulsar endpoints easily deployable by Cloud infrastructure providers, allowing to deploy new Pulsar nodes to further extend the computing capacity of the Network, and the Galaxy servers connected to it.
+
+The Open Infrastructure
+-----------------------
+
+The Open infrastructure encompasses:
+
+- A virtual machine image, named Virtual Galaxy Compute Nodes, providing everything is needed to run Galaxy jobs.
+
+- Containerized tools and Reference Data shared through read only repositories based on CERN-VM FileSystem. 
+
+- Terraform for configuring Cloud infrastructures, including compute, network and storage services.
+
+- Ansible automation engine to perform Pulsar and/or Galaxy configuration and update routines.
+
+This framework exploits `HashiCorp Terraform <https://www.terraform.io/>`_ to perform the installation and configuration of a Pulsar Endpoint on OpenStack using a Virtual imaged named VGCN (see :doc:`requirements` for more details). The Terraform script needs to access an OpenStack cloud via API to:
 
 - upload a VM image of 4GB (preferred, but we support also a preloading via the Dashboard interface);
 - access an ipv4 external network (means a network that can reach internet);
@@ -52,5 +67,5 @@ any network ports to the external, because:
 Dependencies
 ~~~~~~~~~~~~
 
-All tools dependencies are resolved by UseGalaxy.eu through a container mechanism resolver providing a proper Singularity image for each job.
+All tools dependencies are resolved by UseGalaxy.eu through a container mechanism resolver providing a proper `Apptainer <https://apptainer.org/>`_ (formerly Singularity) image for each tool.
 Singularity images are made available locally through a distribution system enabled by a CVMFS servers network.

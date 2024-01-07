@@ -29,6 +29,13 @@ endpoint on an OpenStack Cloud infrastructure and how to connect it to
 useGalaxy.* server. The same Pulsar endpoint can be associated to any Galaxy
 instance, if properly configured.
 
+When you reach to the end of this document, you'll have an operational Pulsar
+endpoint running on your OpenStack tenant. The document covers from setting up of
+OpenStack details, and required steps to install the endpoint with Terraform on
+this created OpenStack space, using HTCondor as default Resource Manager system.
+Nevertheless, any Pulsar enpoint, exploiting either Cloud or HPC resurces,
+could be connected to the Pulsar Network.
+
 .. toctree::
    :maxdepth: 2
    :caption: Pulsar Endpoint Configuration
