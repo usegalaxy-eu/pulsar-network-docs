@@ -8,13 +8,13 @@ Access to an OpensStack tenant is needed to perform the Pulsar endpoint installa
 
 To allow Terraform to access the Tenant download the **OpenStack RC File v2.0 (v3)** from your OpenStack dashboard and source it.
 
-.. figure:: _static/img/horizon_rc_file_download.png
-   :scale: 20%
-   :align: center
-
 ::
 
   $ source pulsar-network-openrc.sh 
+
+.. figure:: _static/img/horizon_rc_file_download.png
+   :scale: 20%
+   :align: center
 
 Pulsar need both private and public network to properly work. Moreover, the private network needs to access to the internet.
 This is needed to allow the Pulsar Compute Nodes to mount CVMFS repositories to get access to Galaxy reference data or Containers.
@@ -79,14 +79,14 @@ Configuring the Appliance, Terraform & Ansible
 Installing the Appliance
 ^^^^^^^^^^^^^^^^^^^^^^^^
 
-For operational flexibility, it's recommended to install an independent small VM  alongside the Pulsar site to handle Terraform & Ansible tasks. This node needs to contain the following tools installed.
+For operational flexibility, it's recommended to install an independent small VM (a jump host) alongside the Pulsar site to handle Terraform & Ansible tasks. This node needs to contain the following tools installed.
 
 - `git`, since a lot of configuration data is stored in Git repositories.
 - `terraform`, since it's the main tool which installs the infrastructure itself.
 - `ansible`, to be able to automatically further configure the nodes we have created via Terraform.
 - Your favorite text editor. All of them are great. No flamewars, please.
 
-There's no hard requirement on the flavor of Linux you're going to use for this node. Any well supported, enterprise level distribution with a long support cycle is a prime choice. If you prefer RHEL based systems, AlmaLinux is a good choice. If you prefer Debian based systems, Debian Stable is another great choice. This document will assume AlmaLinux is used.
+There's no hard requirement on the flavor of Linux you're going to use for this node. Any well supported, enterprise level distribution with a long support cycle is a prime choice. If you prefer RHEL based systems, AlmaLinux is a good choice. If you prefer Debian based systems, Ubuntu or Debian stable are a great choice. This document will assume AlmaLinux is used.
 
 To install your appliance, [download](https://mirrors.almalinux.org/isos/x86_64/9.2.html) AlmaLinux and install it as "minimal install". It's recommended to install "guest agents" too, if you're installing on a virtualization platform (Proxmox, OpenStack, QEMU, etc.). For this appliance, 2 cores, 2-4 GB of RAM and 20GB disk is more than enough, even for the future.
 
