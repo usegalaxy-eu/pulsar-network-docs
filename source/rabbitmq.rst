@@ -1,66 +1,30 @@
-RabbitMQ configuration
-======================
+Get RabbitMQ credentials
+========================
 
-In this step will be described how to make a PR to the `UseGalaxy.eu <https://github.com/usegalaxy-eu>`_ GitHub
-repository to create a new RabbitMQ account for your Pulsar endpoint.
+To be able to accept jobs and enable production in your Pulsar endpoint, you need to get an RabbitMQ key, which allows you to get jobs from the main pool.
 
-#. Fork the usegalaxy.eu GitHub `infrastructure-playbook <https://github.com/usegalaxy-eu/infrastructure-playbook>`_.
+In this step will be described how to make this request to the `UseGalaxy.eu <https://usegalaxy.eu>`_ server administrators to create a new RabbitMQ account for your Pulsar endpoint.
 
-#. Clone the forked repository:
+#. From the top-left `User` menu, navigate to `User -> Preferences -> Manage Information` panel.
+
+   Here is possible to add Pulsar details to get your RabbitMQ credentials in the section:  
 
    ::
 
-     git clone https://github.com/<user-name>/infrastructure-playbook.git
+     Bring your own Pulsar endpoint to Galaxy. You can add here your Pulsar credentials and specifications.
+     After 24 hours Galaxy's job scheduling systems will take your Pulsar into account and schedule appropriate jobs to your compute resources.
+     This is an experimental feature. Contact us if you want to learn more about it.
 
-#. Edit the file ``infrastructure-playbook/group_vars/mq.yml`` with your favourite text editor:
+#. Fill it taking into account your Pulsar endpoint specs:
 
-   - in the `rabbitmq_users` section create a new user adding the following lines:
-
-     ::
-
-       rabbitmq_users:
-       ...
-         - user: <name_name>
-           password: "{{ <rabbit_mq_password_for_your_user> }}"
-           vhost: /pulsar/<user_name>
-
-     For example the configuration for ``it02`` Pulsar endpoint is:
-
-     ::
-
-       rabbitmq_users:
-       ...
-         - user: galaxy_it02
-           password: "{{ rabbitmq_password_galaxy_it02 }}"
-           vhost: /pulsar/galaxy_it02
-
-
-   - Add your virtual host, previously configured, to the ``rabbitmq_vhosts`` section:
-
-     ::
-
-       rabbitmq_vhosts:
-       ...
-         - /pulsar/<name_name>
-
-     For example the configuration for ``it02`` virtual host is:
-
-     ::
-
-       rabbitmq_vhosts:
-       ...
-         - /pulsar/galaxy_it02
-
-#. Make a Pull Request to the original repository and contact the usegalaxy.eu admins.
-Once merged the UseGalaxy.eu team will provide you the RabbitMQ queue URL by mail,
-which needs to be added to your Pulsar configuration as described in the next step.
-
-   .. figure:: _static/img/rabbitmq_PR.png
-      :scale: 40%
+   .. figure:: _static/img/esg_byoc.png
+      :scale: 20%
       :align: center
+
+#. The UseGalaxy.eu team will provide you the RabbitMQ queue URL by mail, which needs to be added to your Pulsar configuration as described in the next step.
 
    The queue URL will looks like this:
 
    ::
 
-     pyamqp://galaxy_it02:*****@mq.galaxyproject.eu:5671//pulsar/galaxy_it02?ssl=1
+      pyamqp://galaxy_it02:*****@mq.galaxyproject.eu:5671//pulsar/galaxy_it02?ssl=1
