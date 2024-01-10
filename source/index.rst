@@ -42,9 +42,9 @@ could be connected to the Pulsar Network.
 
    introduction
    requirements
+   rabbitmq
    pretasks
    build_pulsar_node
-   rabbitmq
    pulsar
    galaxy
    vars_tf
