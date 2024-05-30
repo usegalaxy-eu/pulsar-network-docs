@@ -122,8 +122,8 @@ It can be installed through PyPi:
 
 Ansible directly packaged in your distribution, for example on AlmaLinux it can be directly installed with
 
-```
-$ sudo dnf install ansible
-```
+::
+
+   $ sudo dnf install ansible
 
 After installling Terraform & Ansible, the next step is to get the Terraform files so we can start to apply it to our infrastructure and start building our Pulsar endpoint.
