@@ -55,7 +55,7 @@ In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Req
                   - ["Test Pulsar deployment", test01-pulsar]
 
    .. figure:: _static/img/HCMR_pulsar_preferences.png
-      :scale: 20%
+      :scale: 40%
       :align: center
 
 #. Next to this we need to add a new TPV destination. Edit the YAML file, in the form of a jinja template:
@@ -107,7 +107,7 @@ In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Req
    ``scheduling``: the short name you configured in the previous section, in this case ``test01-pulsar``.
 
    .. figure:: _static/img/HCMR_pulsar_destinations.png
-      :scale: 20%
+      :scale: 40%
       :align: center
 
 #. Then we add the user credentials, i.e. RabbitMQ username and password, for the new endpoint to the RabbitMQ list, editing the file:
@@ -141,7 +141,7 @@ In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Req
    In this case, we added a user named ``galaxy_test01``, a password in the form of a jinja2 variable ``{{ rabbitmq_password_galaxy_test01 }}`` and a virtual host ``/pulsar/galaxy_test01``.
 
    .. figure:: _static/img/HCMR_pulsar_mq.png
-      :scale: 20%
+      :scale: 40%
       :align: center
 
 #. Finally, we need to add the new destination to the (use)Galaxy job configuration file:
@@ -192,7 +192,7 @@ In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Req
     pyamqp://galaxy_test01:*****@mq.galaxyproject.eu:5671//pulsar/galaxy_test01?ssl=1
 
    .. figure:: _static/img/HCMR_pulsar_jobconf.png
-      :scale: 20%
+      :scale: 40%
       :align: center
 
 #. Push them to the forked repository:
