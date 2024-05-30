@@ -44,8 +44,8 @@ Alternatively, the OpenStack Horizon Dashboard allows to upload an image by URL 
 
 Before starting installation of the endpoint, we need to upload two disk images to our instance. These images are for CPU and GPU based worker nodes, respectiverly. First, we need to download these images to our system. As the day of writing this documentation, the images are located at the following URLs:
 
-- `CPU Worker Node <https://usegalaxy.eu/static/vgcn/vggp-v60-j225-1a1df01ec8f3-dev.raw>`_
-- `GPU Worker Node <https://usegalaxy.eu/static/vgcn/vggp-gpu-v60-j16-4b8cbb05c6db-dev.raw>`_
+- `CPU Worker Node (vggp-v60-j225-1a1df01ec8f3-dev.raw) <https://usegalaxy.eu/static/vgcn/vggp-v60-j225-1a1df01ec8f3-dev.raw>`_
+- `GPU Worker Node (vggp-gpu-v60-j16-4b8cbb05c6db-dev.raw)<https://usegalaxy.eu/static/vgcn/vggp-gpu-v60-j16-4b8cbb05c6db-dev.raw>`_
 
 Each image is around 6.6GB. Please use a download accelerator like `aria2c` or `axel` to download with high speed.
 
