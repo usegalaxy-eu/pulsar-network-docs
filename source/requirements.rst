@@ -47,7 +47,7 @@ Before starting installation of the endpoint, we need to upload two disk images 
 - `CPU Worker Node (vggp-v60-j225-1a1df01ec8f3-dev.raw) <https://usegalaxy.eu/static/vgcn/vggp-v60-j225-1a1df01ec8f3-dev.raw>`_
 - `GPU Worker Node (vggp-gpu-v60-j16-4b8cbb05c6db-dev.raw)<https://usegalaxy.eu/static/vgcn/vggp-gpu-v60-j16-4b8cbb05c6db-dev.raw>`_
 
-Each image is around 6.6GB. Please use a download accelerator like `aria2c` or `axel` to download with high speed.
+Each image is around 6.6 GB. Please use a download accelerator like `aria2c` or `axel` to download with high speed.
 
 .. note::
 
@@ -62,7 +62,7 @@ After downloading the images, we need to upload to the OpenStack project. To do 
 
 	- For CPU based worker node image name use `vggp-v60-j225-1a1df01ec8f3-dev`, and for GPU based worker node image use `vggp-gpu-v60-j16-4b8cbb05c6db-dev`.
 	- Fill the descriptions the way you see fit.
-	- `Browse...` your system and find the correct image, and select it.
+	- `Browse...` your system and find the correct image, and select it, or, if the option is available, copy & paste the image url.
 	-  Select `RAW` from format.
 	-  Do not fill/change "Image requirements" section.
 	-  Set Image Sharing to "Private"
@@ -86,50 +86,44 @@ For operational flexibility, it's recommended to install an independent small VM
 - `ansible`, to be able to automatically further configure the nodes we have created via Terraform.
 - Your favorite text editor. All of them are great. No flamewars, please.
 
-There's no hard requirement on the flavor of Linux you're going to use for this node. Any well supported, enterprise level distribution with a long support cycle is a prime choice. If you prefer RHEL based systems, AlmaLinux is a good choice. If you prefer Debian based systems, Ubuntu or Debian stable are a great choice. This document will assume AlmaLinux is used.
-
-To install your appliance, [download](https://mirrors.almalinux.org/isos/x86_64/9.2.html) AlmaLinux and install it as "minimal install". It's recommended to install "guest agents" too, if you're installing on a virtualization platform (Proxmox, OpenStack, QEMU, etc.). For this appliance, 2 cores, 2-4 GB of RAM and 20GB disk is more than enough, even for the future.
-
-After installation completes, please completely update your OS with `dnf update`, and reboot. Then, installation of following packages are recommended for quality of life while working with your appliance:
-
-1. `epel-release` (Please install first & independently)
-2. `screen`
-3. `yum-utils`
-4. `vim`
-5. `bash-completion`
-6. `multitail`
-7. `jq`
-
-After installing these packages, and making other quality of life improvements you want to do on your appliance, then we can install Terraform on the appliance.
+There's no hard requirement on the flavor of Linux you're going to use for this node. Any well supported, enterprise level distribution with a long support cycle is a prime choice. If you prefer RHEL based systems, AlmaLinux and RockyLinux are a good choice. If you prefer Debian based systems, Ubuntu or Debian stable are a great choice. This tutorial has been tested on AlmaLinux, RockyLinux and Ubuntu 22.04.
 
 Installing Terraform
 ^^^^^^^^^^^^^^^^^^^^
 
 Terraform is a tool which manages your infrastructure with "Infrastructure as code" paradigm. It's used to deploy The Pulsar Endpoint in tandem with Ansible.
 
-Installation of Terraform is straightforward. In essence, for AlmaLinux (and other RedHat based distributions), it's three commands:
+Installation of Terraform is straightforward. Indeed, for AlmaLinux (and other RedHat based distributions), it's three commands:
 
-```bash
-$ sudo yum install -y yum-utils
-$ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
-$ sudo yum -y install terraform
-```
+::
+
+   $ sudo yum install -y yum-utils
+   $ sudo yum-config-manager --add-repo https://rpm.releases.hashicorp.com/RHEL/hashicorp.repo
+   $ sudo yum -y install terraform
 
 .. note:: 
 
    You can install the packages without `sudo` if you have `root` user access, too.
 
-For more information, and other ways to install Terraform, see the [official documentation](https://developer.hashicorp.com/terraform/downloads?product_intent=terraform).
+For more information, and other ways to install Terraform, see the `official documentation <https://developer.hashicorp.com/terraform/downloads?product_intent=terraform>`_.
 
 Installing Ansible
 ^^^^^^^^^^^^^^^^^^
 
-Since Ansible is an RedHat project, it's directly packaged in AlmaLinux repositories, too. It can be directly installed with
+Since Ansible is an RedHat project.
 
-```bash
-$ sudo dnf install ansible vim-ansible
+It can be installed through PyPi:
+
+::
+
+   python3 -m venv venv
+   . ./venv/bin/activate
+   pip install ansible==8.7
+
+Ansible directly packaged in your distribution, for example on AlmaLinux it can be directly installed with
+
 ```
-
-We're installing `vim-ansible` since it provides quality of life improvements while editing playbook files.
+$ sudo dnf install ansible
+```
 
 After installling Terraform & Ansible, the next step is to get the Terraform files so we can start to apply it to our infrastructure and start building our Pulsar endpoint.
