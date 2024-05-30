@@ -210,6 +210,14 @@ In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Req
      To github.com:mtangaro/infrastructure-playbook.git
         db718db4..c8bd1dbd  master -> master
 
+The final pull request will looks like as the following:
+
+.. figure:: _static/img/HCMR_pulsar_PR.png
+   :scale: 30%
+   :align: center
+
+The ``secret_group_vars/pulsar.yml`` is edited by the usegalaxy-eu admin team, adding the RabbitMQ password.
+
 Bring your own compute
 ----------------------
 
