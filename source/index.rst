@@ -43,7 +43,7 @@ could be connected to the Pulsar Network.
    introduction
    requirements
    rabbitmq
-   pretasks
+   configuration
    build_pulsar_node
    pulsar
    galaxy
