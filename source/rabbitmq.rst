@@ -5,6 +5,11 @@ To be able to accept jobs and enable production in your Pulsar endpoint, you nee
 
 In this step will be described how to make this request to the `UseGalaxy.eu <https://usegalaxy.eu>`_ server administrators to create a new RabbitMQ account for your Pulsar endpoint.
 
+
+.. warning::
+
+   You don't need to edit any files not detailed here. Some of the files will be updated/modified by Galaxy administrators before your PR is merged. All files are indented by spaces. Do not use any tabs. 
+
 Pull request on GitHub
 ----------------------
 
@@ -40,6 +45,8 @@ In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Req
 
    Navigate to the ``distributed_compute`` section, and add your new endpoint at the end of the section, with a description of the deployment, here ``Test Pulsar deployment``, followed by its short name, ``test01-pulsar`` in this example.
 
+   For example you can add your site to the bottom of the list in the form ``CITY (COUNTRY) - INSTITUTION", SITE_NAME``.
+
    ::
 
      distributed_compute:
@@ -58,7 +65,7 @@ In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Req
       :scale: 40%
       :align: center
 
-#. Next to this we need to add a new TPV destination. Edit the YAML file, in the form of a jinja template:
+#. Next to this we need to add a new TPV destination. This file defines our resource limits, and needs a small block of information to add, including what we're providing as a resource. Edit the YAML file, in the form of a jinja template:
 
    ::
 
@@ -75,7 +82,7 @@ In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Req
        pulsar_default: # use for remote Pulsar nodes and ALWAYS overwrite the runner.
        ...
 
-   and add the new pulsar destination to TPV configuratio:
+   and add the new pulsar destination to TPV configuration:
 
    ::
 
@@ -90,11 +97,11 @@ In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Req
          require:
            - test01-pulsar
 
-   Give it a name, in this case ``pulsar_test01_tpv``, and configure it taking into account the resources you will make available:
+   Name of your queue, in this case ``pulsar_test01_tpv``, it should  end with `_tpv`. Configure it taking into account the resources you will make available:
 
    ``inherits``: this destination always inherits from ``pulsar_default``.
 
-   ``runner``: this is the name of your destination, ``pulsar_eu_test01`` in this case.
+   ``runner``: this is the name of your destination, ``pulsar_eu_test01`` in this case. Since we're part of Pulsar EU, `pulsar_eu_` remains. Then add your institution name, and we prepend our name with `01`, because we may add new runners later.
 
    ``max_accepted_cores``: the maximum number of cores a job can require to run on this endpoint.
 
@@ -104,7 +111,7 @@ In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Req
    
    ``max_accepted_gpus``: the maximum number of GPUs a job can require to run on this endpoint.
    
-   ``scheduling``: the short name you configured in the previous section, in this case ``test01-pulsar``.
+   ``scheduling``: the short name you configured in the previous section, in this case ``test01-pulsar``, as a requirement to our resource definitions, binding the two together.
 
    .. figure:: _static/img/HCMR_pulsar_destinations.png
       :scale: 40%
@@ -233,6 +240,21 @@ The final pull request will looks like as the following:
    :align: center
 
 The ``secret_group_vars/pulsar.yml`` is edited by the usegalaxy-eu admin team, adding the RabbitMQ password.
+
+Resources on the Net
+^^^^^^^^^^^^^^^^^^^^
+
+- UseGalaxy.eu Terraform recipes for Pulsar Endpoint - `GitHub <https://github.com/usegalaxy-eu/pulsar-deployment>`_
+
+- UseGalaxy.eu Infrastructure Playbook - `GitHub <https://github.com/usegalaxy-eu/infrastructure-playbook>`_
+
+- AlmaLinux - `Homepage <https://almalinux.org/>`_
+
+- Terraform Installation Guide - `HashiCorp <https://developer.hashicorp.com/terraform/downloads?product_intent=terraform>`_
+
+- Terraform OpenStack Provider Reference - `HashiCorp <https://registry.terraform.io/providers/terraform-provider-openstack/openstack/latest/docs>`_
+
+- Terraform runs failing with "x509: certificate signed by unknown authority" error - `HashiCorp <https://support.hashicorp.com/hc/en-us/articles/360046090994-Terraform-runs-failing-with-x509-certificate-signed-by-unknown-authority-error>`_
 
 Bring your own compute
 ----------------------
