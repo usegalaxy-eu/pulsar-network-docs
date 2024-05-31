@@ -88,18 +88,3 @@ Configuration
    #. Delete `nfs.tf`
 
    #. Change every autofs entry to point to your mount points and your NFS server's name/ip address.
-
-#. Validate the terraform recipes configuration:
-
-   ::
-
-     WS=test01 make plan
-
-#. Run the pre-stasks recipes:
-
-   ::
-
-     WS=test01 make apply
-
-
-The resources described in to the ``pre_tasks.tf`` are now created on your Openstack tenant.
