@@ -58,28 +58,36 @@ Configuration
       * - image
         - ...
         - The name and the source url of the image to upload in your openstack environment
-      * - Row 2, column 1
-        - Row 2, column 2
-        - Row 2, column 3
+      * - name_prefix
+        - vgcn-
+        - Prefixed to the name of the VMs that are launched
+      * - name_suffix
+        - .usegalaxy.eu
+        - This defaults to our domain, images do not need to be named as FQDNs but if you're using any sort of automated OpenStack DNS solution this can make things easier.
+      * - flavors
+        - ...
+        - OpenStack flavors map that you will use to define resources of nova computing instances.
+      * - exec_node_count
+        - 2
+        - Number of exec nodes.
+      * - public_key
+        - ...
+        - SSH public key to use to access computing instances.
+      * - secgroups
+        - ...
+        - We have built some default rules for network access. Currently these are extremely broad, we may change that in the future. Alternatively you can supply your own preferred security groups here.
+      * - network
+        - galaxy-net
+        - The network to connect the nodes to.
+      * - nfs_disk_size
+        - 3
+        - NFS server disk size in GB.
 
+   If you want to disable the built-in NFS server and supply your own, simply:
 
-   |Variable          | Default Value          | Purpose|
-   |--------          | -------------          | -------|
-   |image             | ...                    | The name and the source url of the image to upload in your openstack environment
-   |`name_prefix`     | `vgcn-`                | Prefixed to the name of the VMs that are launched
-   |`name_suffix`     | `.usegalaxy.eu`        | This defaults to our domain, images do not need to be named as FQDNs but if you're using any sort of automated OpenStack DNS solution this can make things easier.
-   |`flavors`         | ...                    | OpenStack flavors map that you will use to define resources of nova computing instances.
-   |`exec_node_count` | `2`                    | Number of exec nodes.
-   |`public_key`      | ...                    | SSH public key to use to access computing instances.
-   |`secgroups`       | ...                    | We have built some default rules for network access. Currently these are extremely broad, we may change that in the future. Alternatively you can supply your own preferred security groups here.
-   |`network`         | `galaxy-net`           | The network to connect the nodes to.
-   |`nfs_disk_size`   | `3`                    | NFS server disk size in GB.
+   #. Delete `nfs.tf`
 
-If you want to disable the built-in NFS server and supply your own, simply:
-
-1. Delete `nfs.tf`
-2. Change every autofs entry to point to your mount points and your NFS
-   server's name/ip address.
+   #. Change every autofs entry to point to your mount points and your NFS server's name/ip address.
 
 #. Validate the terraform recipes configuration:
 
