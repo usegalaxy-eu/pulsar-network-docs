@@ -45,8 +45,6 @@ could be connected to the Pulsar Network.
    rabbitmq
    configuration
    build_pulsar_node
-   pulsar
-   galaxy
    vars_tf
 
 .. toctree::
