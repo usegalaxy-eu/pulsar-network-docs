@@ -1,24 +1,30 @@
 Building the Pulsar endpoint
 ============================
 
-After running the pre-tasks recipes and having properly edited the ``vars.tf`` file (see section :doc:`vars_tf`),
+After having properly edited the ``pre_tasks.tf`` and ``vars.tf`` file (see section :doc:`vars_tf`),
 we are ready to create the Pulsar endpoint.
+
+.. note::
+
+   For this step you need a SSH Key pair and RabbitMQ credentials from UseGalaxy.eu.
+
 
 Navigate into the Pulsar infrastructure directory:
 
 ::
 
-  cd pulsar-infrastructure
+  cd pulsar-deployment/tf
 
 and execute:
 
 ::
 
-  WS=<workspace-name> make init
+  terraform init
 
-  WS=<workspace-name> make plan
+  terraform plan
 
-  WS=<workspace-name> make apply
+  terraform apply -var "pvt_key=~/.ssh/<key>" -var "condor_pass=<condor-passord>" -var "mq_string=pyamqp://<pulsar>:<password>@mq.galaxyproject.eu:5671//pulsar/<pulsar>?ssl=1"
+
 
 The ``apply`` command output the IP addresses of the Pulsar Central Manager
 
@@ -45,7 +51,11 @@ Here, for example, the OpenStack dashboard showing a Pulsar endpoint with the Ce
    :align: center
 
 The Pulsar endpoint is now configured, but Pulsar is still turned off.
-In the next step we will configure Pulsar to talk to `usegalaxy.eu <https://usegalaxy.eu>`_ RabbitMQ and enable it.
+
+.. warning::
+
+   The central manager is configured with ansible at deployment time. The HTCondor executors are configured with ansible run by cloud-init after the VM startup. Therefore the deployment may require few more minuts to be operational.
+
 
 Testing SSH access
 ----------------------------------
@@ -63,5 +73,4 @@ file of the Central Manager VM. To login to this VM just type:
 
 .. note::
 
-   Terraform scripts also add a VGCN private ssh key to the CM and the public one to the other nodes.
-   So after successfully logged in to the CM, you can reach, without other impediments, the rest of the network.
+   Terraform scripts also add a VGCN private ssh key to the CM and the public one to the other nodes. So after successfully logged in to the CM, you can reach, without other impediments, the rest of the network.
