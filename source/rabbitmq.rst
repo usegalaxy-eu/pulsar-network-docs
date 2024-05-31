@@ -233,7 +233,7 @@ In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Req
      To github.com:mtangaro/infrastructure-playbook.git
         db718db4..c8bd1dbd  master -> master
 
-The final pull request will looks like as the following:
+An example pull request can be found `here <https://github.com/usegalaxy-eu/infrastructure-playbook/pull/872/files>`_ and it looks like as the following:
 
 .. figure:: _static/img/HCMR_pulsar_PR.png
    :scale: 20%
