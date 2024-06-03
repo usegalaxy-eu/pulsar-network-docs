@@ -107,6 +107,29 @@ Configuration options
 	     }
 	  }
 
+-------------
+``gpu_image``
+-------------
+
+:Description:
+        Set the VGCN GPU image to use. Terraform expects to find on OpenStack with the name specified in this field.
+        The image ``name`` must match the name of the image on the OpenStack tenant.
+        This field can be left unchanged.
+
+:Example:
+        ::
+        
+          variable "gpu_image" {
+            type = map
+            default = {
+              "name"             = "vggp-gpu-v60-j16-4b8cbb05c6db-dev"
+              "image_source_url" = "https://usegalaxy.eu/static/vgcn/vggp-gpu-v60-j16-4b8cbb05c6db-dev.raw"
+              // you can check for the latest image on https://usegalaxy.eu/static/vgcn/ and replace this
+              "container_format" = "bare"
+              "disk_format"      = "raw"
+            }
+          }
+
 --------------
 ``public_key``
 --------------
@@ -242,3 +265,43 @@ Configuration options
 	  variable "ssh-port" {
 	    default = "22"
 	  }
+
+
+------------
+``pvt_key``
+------------
+
+:Description:
+        Defines the path to the SSH private key, corresponding to the ``public_key``, allowing user to move among the VMs deployed. Can be defined during the terraform apply step.
+
+:Example:
+        ::
+
+         //set these variables during execution terraform apply -var "pvt_key=<~/.ssh/my_private_key>" -var "condor_pass=<MyCondorPassword>"
+         variable "pvt_key" {}
+
+
+---------------
+``condor_pass``
+---------------
+
+:Description:
+        Defines the HTCondor password for CM and executors. Can be defined during the terraform apply step.
+
+:Example:
+        ::
+        
+          variable "condor_pass" {}
+
+
+------------
+``mq_string``
+------------
+
+:Description:
+        Defines the message queue url for configuring the pulsar endpoint. Can be defined during the terraform apply step.
+
+:Example:
+        ::
+
+          variable "mq_string" {}
