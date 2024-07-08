@@ -1,13 +1,9 @@
 Configure the pulsar endpoint
 =============================
 
-This step will create several Pulsar needed resources on the cloud infrastructure, which will be used during the nodes configuration:
-
-  - the virtual image
-  - the private network
-  - the router
-
-This step can be skipped if the resources above are available or provided by your cloud infrastructure in other ways. More details below.
+This step will create several Pulsar needed resources on the cloud infrastructure, which is automatically done by `terraform`.
+In that way, your Pulsar endpoint has its own resources and can be safely deleted and redeployed using `terraform` only.
+The only required resource is a public network in your OpenStack tenant.
 
 .. note::
 
@@ -24,7 +20,7 @@ Configuration
 
    ::
 
-     git clone https://github.com/usegalaxy-eu/pulsar-infrastructure.git
+     git clone https://github.com/usegalaxy-eu/pulsar-deployment.git
 
 #. Navigate in the pulsar-deployment directory:
 
@@ -32,15 +28,7 @@ Configuration
 
      cd pulsar-deployment/tf
 
-   we are going to edit two files: ``pre_tasks.tf`` and ``vars.tf``
-
-#. Edit the ``pre_tasks.tf`` file accordingly with your needs. It has three sections:
-
-   - Upload the virtual machine image via OpenStack API. This block should be commented if the image is already available on your tenant or if you upload it via the dashboard interface.
-
-   - Create private network. This block should be commented if network is already available.
-
-   - Create a router to ensure the private network will be able to reach the Internet. This block should be commented if this feature is provided by the network
+   we are going to edit ``vars.tf`` to customize your cluster's size, the images and naming.
 
 #. Edit the ``vars.tf`` file to configure the Pulsar endpoint.
 
@@ -73,12 +61,18 @@ Configuration
       * - public_key
         - ...
         - SSH public key to use to access computing instances.
-      * - secgroups
+      * - secgroups_cm
         - ...
-        - We have built some default rules for network access. Currently these are extremely broad, we may change that in the future. Alternatively you can supply your own preferred security groups here.
-      * - network
+        - We have built some default rules for network access. Currently these are extremely broad, we may change that in the future.
+      * - secgroups
+        - <ingress-private>, <egress-public>
+        - These are the secgroups for the exec nodes and the NFS node. <egress-public> will allow all egress to the entire internet. <ingress-private> allows ingress from other nodes with the same security group, only.
+      * - public_network
+        - public
+        - The public network to connect the central manager to, terraform will **not** create this, so make sure to have it available in your OpenStack tenant.
+      * - private_network
         - galaxy-net
-        - The network to connect the nodes to.
+        - The network to connect the nodes to, terraform will create this, but you need to specify a [private IP range](https://www.iana.org/help/private-addresses) in CIDR notation, that it can use on your tenant.
       * - nfs_disk_size
         - 3
         - NFS server disk size in GB.
