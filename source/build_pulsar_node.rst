@@ -23,7 +23,7 @@ and execute:
 
   terraform plan
 
-  terraform apply -var "pvt_key=~/.ssh/<key>" -var "condor_pass=<condor-passord>" -var "mq_string=pyamqp://<pulsar>:<password>@mq.galaxyproject.eu:5671//pulsar/<pulsar>?ssl=1"
+  terraform apply -var "pvt_key=~/.ssh/<key>" -var "condor_pass=<condor-password>" -var "mq_string=pyamqp://<pulsar>:<password>@mq.galaxyproject.eu:5671//pulsar/<pulsar>?ssl=1"
 
 
 The ``apply`` command output the IP addresses of the Pulsar Central Manager
