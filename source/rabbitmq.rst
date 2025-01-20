@@ -13,7 +13,7 @@ In this step will be described how to make this request to the `UseGalaxy.eu <ht
 Pull request on GitHub
 ----------------------
 
-In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Request on their `Ìnfrastructure Playbook repository <https://github.com/usegalaxy-eu/infrastructure-playbook>`_ **is manadatory**
+In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Request on their `Infrastructure Playbook repository <https://github.com/usegalaxy-eu/infrastructure-playbook>`_ **is manadatory**
 
 .. note::
 
@@ -23,7 +23,7 @@ In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Req
 
    We will call this test deployment test01-pulsar.
 
-#. Fork the usegalaxy.eu GitHub repository `Ìnfrastructure Playbook repository <https://github.com/usegalaxy-eu/infrastructure-playbook>`_.
+#. Fork the usegalaxy.eu GitHub repository `Infrastructure Playbook repository <https://github.com/usegalaxy-eu/infrastructure-playbook>`_.
 
 #. Locally clone the forked repository:
 
