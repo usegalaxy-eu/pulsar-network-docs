@@ -65,6 +65,7 @@ In order to retrieve the RabbitMQ credentials from usegalaxy-eu team, a Pull Req
       :scale: 40%
       :align: center
 
+.. _tpv-configuration:
 #. Next to this we need to add a new TPV destination. This file defines our resource limits, and needs a small block of information to add, including what we're providing as a resource. Edit the YAML file, in the form of a jinja template:
 
    ::
