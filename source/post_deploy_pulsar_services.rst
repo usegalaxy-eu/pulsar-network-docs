@@ -23,7 +23,7 @@ Here is an example configuration for the file:
 
 Once you have updated the file, save it, exit, and encrypt it if using Ansible Vault.
 
-``message_queue_url`` is the initial message queue url, belonging to the main pulsar service, when is defined the playbook will check against ``ex_mqs_dict`` for duplicates to avoid conflicts, is not mandatory.
+``message_queue_url`` is the initial message queue url belonging to the main pulsar service. If defined, the playbook will check against ``ex_mqs_dict`` for duplicates to avoid conflicts. This parameter is not mandatory.
 
 More details on the variables can be found in :ref:`here <multi-variables>`. 
 
