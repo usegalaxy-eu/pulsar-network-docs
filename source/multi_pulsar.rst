@@ -18,9 +18,9 @@ TPV Configuration
 -----------------
 
 .. note::
-    The files ``files/galaxy/config/user_preferences_extra_conf.yml``, ``group_vars/mq.yml``, ``templates/galaxy/config/job_conf.yml`` for the additional pulsar services can be updated as usual, entering the correct values based on the Pulsar endpoint, the RabbitMQ credentials and virtual host.
+    Usegalaxy files, updated through pull request, ``files/galaxy/config/user_preferences_extra_conf.yml``, ``group_vars/mq.yml``, ``templates/galaxy/config/job_conf.yml`` for the additional pulsar services can be updated as usual, entering the correct values based on the Pulsar endpoint, the RabbitMQ credentials and virtual host.
 
-The additional job directories cannot be the defaults, since those are used by the main pulsar service. Therefore the TPV configuration described in :ref:`here <tpv-configuration>` has to be adjusted to include the supplementary directories under ``params``.
+The additional job directories cannot be the defaults, since those are used by the main pulsar service. Therefore the TPV configuration described :ref:`here <tpv-configuration>` has to be adjusted to include the supplementary directories under ``params``.
 Below is an example of an extra pulsar service destination, to highlight the differences a diff was used against the main configuration:
 
   ::

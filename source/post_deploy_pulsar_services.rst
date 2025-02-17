@@ -1,7 +1,7 @@
 Setting up extra Pulsar services after deployment
 =================================================
 
-To add extra Pulsar services, after the initial deployment with Terraform, the ``post_deploy_pulsar_services.yml`` Ansible playbook can be used. 
+To add extra Pulsar services, in case the Pulsar endpoint has been already deployed, the ``post_deploy_pulsar_services.yml`` Ansible playbook can be used. 
 The playbook adds only new services and required directories or configuration files to the central manager without recreating the VM.
 Navigate into the ansible folder in the repository:
 
