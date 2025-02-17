@@ -46,6 +46,14 @@ could be connected to the Pulsar Network.
    configuration
    build_pulsar_node
    vars_tf
+   multi_pulsar
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Post Deployment
+
+   post_deploy_pulsar_services
+   rm_multi_pulsar
 
 .. toctree::
    :maxdepth: 2
