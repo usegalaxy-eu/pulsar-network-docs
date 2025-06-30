@@ -63,6 +63,7 @@ could be connected to the Pulsar Network.
    GPUs <topics/gpus>
    Staging actions <topics/staging>
    Jump host <topics/jump_host>
+   Oracle Cloud Infrastructure <topics/oracle>
 
 .. toctree::
    :maxdepth: 2
